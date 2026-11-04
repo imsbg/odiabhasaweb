@@ -13,7 +13,10 @@ import {
   generateWordProblem,
   parseDeepLinkFromSearch,
   getOdiaUrlPath,
-  parseRouteFromLocation
+  parseRouteFromLocation,
+  shouldShowAppPopup,
+  ONE_DAY_MS,
+  ODIA_NUMBER_WORDS
 } from './odiaUtils.ts';
 import { Screen, getCharDetails, swarabarnaList } from '../data/odiaData.ts';
 import {
@@ -32,6 +35,7 @@ test('toOdiaNum and fromOdiaNum round-trip conversion', () => {
 
 test('convertToOdiaWords and convertToEnglishWords Indian numbering system', () => {
   assert.equal(convertToOdiaWords(0), 'ଶୂନ');
+  assert.equal(convertToOdiaWords(21), 'ଏକୋଇଶ');
   assert.equal(convertToOdiaWords(25), 'ପଚିଶ');
   assert.equal(convertToOdiaWords(100), 'ଶହେ');
   assert.equal(convertToOdiaWords(125), 'ଶହେ ପଚିଶ');
@@ -39,6 +43,9 @@ test('convertToOdiaWords and convertToEnglishWords Indian numbering system', () 
   assert.equal(convertToEnglishWords(0), 'Zero');
   assert.equal(convertToEnglishWords(125), 'One Hundred Twenty Five');
   assert.equal(convertToEnglishWords(100000), 'One Lakh');
+  for (const w of ODIA_NUMBER_WORDS) {
+    assert.equal(/[\u0980-\u09FF]/.test(w), false, `Word ${w} must not contain Bengali chars`);
+  }
 });
 
 test('getPanikiaTableData generates 10 rows with Odia script and numbers', () => {
@@ -46,7 +53,7 @@ test('getPanikiaTableData generates 10 rows with Odia script and numbers', () =>
   assert.equal(table2.length, 10);
   assert.equal(table2[0].numericText, '୨ × ୧ = ୨');
   assert.equal(table2[0].scriptText, 'ଦୁଇ କେ ଦୁଇ');
-  assert.equal(table2[4].Product ?? table2[4].product, 10);
+  assert.equal(table2[4].product, 10);
   assert.equal(table2[4].scriptText, 'ଦୁଇ ପଞ୍ଚା ଦଶ');
 });
 
@@ -67,13 +74,15 @@ test('Digital Bajara step-by-step explanation generators', () => {
   assert.ok(smart2.includes('୧୮୦.୦୦'));
 });
 
-test('generateWordProblem covers all 22 templates with valid answers', () => {
+test('generateWordProblem covers all 22 templates with valid answers and no Bengali chars', () => {
   for (let i = 1; i <= 22; i++) {
     const wp = generateWordProblem(i);
     assert.equal(wp.templateIndex, i);
     assert.ok(wp.question.length > 10);
     assert.ok(Number.isFinite(wp.answer) && wp.answer > 0);
     assert.ok(wp.solution.includes(toOdiaNum(wp.answer)));
+    assert.equal(/[\u0980-\u09FF]/.test(wp.question), false);
+    assert.equal(/[\u0980-\u09FF]/.test(wp.solution), false);
   }
 });
 
@@ -109,4 +118,15 @@ test('odiaData character lists and dictionary integrity', () => {
   assert.ok(detailsA.words.includes('ଅରଟ'));
   assert.ok(detailsA.sentences.length > 0);
 });
+
+test('shouldShowAppPopup enforces 1-day (24h) dismissal window', () => {
+  const now = 1_700_000_000_000;
+  assert.equal(shouldShowAppPopup(null, now), true);
+  assert.equal(shouldShowAppPopup('', now), true);
+  assert.equal(shouldShowAppPopup(String(now - 1000), now), false);
+  assert.equal(shouldShowAppPopup(String(now - ONE_DAY_MS + 1000), now), false);
+  assert.equal(shouldShowAppPopup(String(now - ONE_DAY_MS), now), true);
+  assert.equal(shouldShowAppPopup(String(now - ONE_DAY_MS - 5000), now), true);
+});
+
 

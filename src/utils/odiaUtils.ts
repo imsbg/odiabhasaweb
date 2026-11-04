@@ -30,22 +30,15 @@ export function fromOdiaNum(value: string): string {
 export const ODIA_NUMBER_WORDS: string[] = [
   "ଶୂନ", "ଏକ", "ଦୁଇ", "ତିନି", "ଚାରି", "ପାଞ୍ଚ", "ଛଅ", "ସାତ", "ଆଠ", "ନଅ", "ଦଶ",
   "ଏଗାର", "ବାର", "ତେର", "ଚଉଦ", "ପନ୍ଦର", "ଷୋହଳ", "ସତର", "ଅଠର", "ଊଣେଇଶ", "କୋଡ଼ିଏ",
-  "একୋଇଶ", "ବାଇଶ", "ତେଇଶ", "ଚବିଶ", "ପଚିଶ", "ଛବିଶ", "ସତେଇଶ", "ଅଠେଇଶ", "ଅଣତିରିଶ", "ତିରିଶ",
-  "একତିରିଶ", "ବତିଶ", "ତେତିଶ", "ଚଉତିରିଶ", "ପଇଁତିରିଶ", "ଛତିଶ", "ସଇଁତିରିଶ", "ଅଠତିରିଶ", "ଅଣଚାଳିଶ", "ଚାଳିଶ",
-  "একଚାଳିଶ", "ବୟାଳିଶ", "ତେୟାଳିଶ", "ଚଉରାଳିଶ", "ପଞ୍ଚାଳିଶ", "ଛୟାଳିଶ", "ସତଚାଳିଶ", "ଅଠଚାଳିଶ", "ଅଣপଚାଶ", "ପଚାଶ",
-  "एकाବନ", "ବାବନ", "ତେପନ", "ଚଉବନ", "ପଞ୍ଚାବନ", "ଛପନ", "ସତାବନ", "ଅଠାବନ", "ଅଣଷଠି", "ଷାଠିଏ",
-  "একଷଠି", "ବାଷଠି", "ତେଷଠି", "ଚଉଷଠି", "ପଞ୍ଚଷଠି", "ଛଅଷଠି", "ସତଷଠି", "ଅଠଷଠି", "ଅଣସତୁରି", "ସତୁରି",
-  "একସ୍ତରି", "ବାସ୍ତରି", "ତେସ୍ତରି", "ଚଉସ୍ତରି", "ପଞ୍ଚସ୍ତରି", "ଛଅସ୍ତରି", "ସତସ୍ତରି", "ଅଠସ୍ତରି", "ଅଣାଅଶୀ", "ଅଶୀ",
-  "एकाଅଶୀ", "ବୟାଅଶୀ", "ତେୟାଅଶୀ", "ଚଉରାଅଶୀ", "ପଞ୍ଚାଅଶୀ", "ଛୟାଅଶୀ", "ସତାଅଶୀ", "ଅଠାଅଶୀ", "ଅଣାନବେ", "ନବେ",
-  "একାନବେ", "ବୟାନବେ", "ତେୟାନବେ", "ଚଉରାନବେ", "ପଞ୍ଚାନବେ", "ଛୟାନବେ", "ସତାନବେ", "ଅଠାନବେ", "ଅଣେଶତ", "ଶହେ"
-].map((w, idx) => {
-  // Fix exact Odia characters matching NumberToTextScreen.kt
-  const exact: Record<number, string> = {
-    21: "ଏକୋଇଶ", 31: "ଏକତିରିଶ", 41: "ଏକଚାଳିଶ", 49: "ଅଣପଚାଶ", 51: "ଏକାବନ",
-    61: "ଏକଷଠି", 71: "ଏକସ୍ତରି", 81: "ଏକାଅଶୀ", 91: "ଏକାନବେ"
-  };
-  return exact[idx] || w;
-});
+  "ଏକୋଇଶ", "ବାଇଶ", "ତେଇଶ", "ଚବିଶ", "ପଚିଶ", "ଛବିଶ", "ସତେଇଶ", "ଅଠେଇଶ", "ଅଣତିରିଶ", "ତିରିଶ",
+  "ଏକତିରିଶ", "ବତିଶ", "ତେତିଶ", "ଚଉତିରିଶ", "ପଇଁତିରିଶ", "ଛତିଶ", "ସଇଁତିରିଶ", "ଅଠତିରିଶ", "ଅଣଚାଳିଶ", "ଚାଳିଶ",
+  "ଏକଚାଳିଶ", "ବୟାଳିଶ", "ତେୟାଳିଶ", "ଚଉରାଳିଶ", "ପଞ୍ଚାଳିଶ", "ଛୟାଳିଶ", "ସତଚାଳିଶ", "ଅଠଚାଳିଶ", "ଅଣପଚାଶ", "ପଚାଶ",
+  "ଏକାବନ", "ବାବନ", "ତେପନ", "ଚଉବନ", "ପଞ୍ଚାବନ", "ଛପନ", "ସତାବନ", "ଅଠାବନ", "ଅଣଷଠି", "ଷାଠିଏ",
+  "ଏକଷଠି", "ବାଷଠି", "ତେଷଠି", "ଚଉଷଠି", "ପଞ୍ଚଷଠି", "ଛଅଷଠି", "ସତଷଠି", "ଅଠଷଠି", "ଅଣସତୁରି", "ସତୁରି",
+  "ଏକସ୍ତରି", "ବାସ୍ତରି", "ତେସ୍ତରି", "ଚଉସ୍ତରି", "ପଞ୍ଚସ୍ତରି", "ଛଅସ୍ତରି", "ସତସ୍ତରି", "ଅଠସ୍ତରି", "ଅଣାଅଶୀ", "ଅଶୀ",
+  "ଏକାଅଶୀ", "ବୟାଅଶୀ", "ତେୟାଅଶୀ", "ଚଉରାଅଶୀ", "ପଞ୍ଚାଅଶୀ", "ଛୟାଅଶୀ", "ସତାଅଶୀ", "ଅଠାଅଶୀ", "ଅଣାନବେ", "ନବେ",
+  "ଏକାନବେ", "ବୟାନବେ", "ତେୟାନବେ", "ଚଉରାନବେ", "ପଞ୍ଚାନବେ", "ଛୟାନବେ", "ସତାନବେ", "ଅଠାନବେ", "ଅଣେଶତ", "ଶହେ"
+];
 
 export function convertToOdiaWords(n: number): string {
   if (!Number.isFinite(n) || n < 0) return "";
@@ -180,9 +173,9 @@ export const shopUnits: ShopUnit[] = [
   { name: "କି.ଗ୍ରା (Kg)", factor: 1.0, category: "Weight", baseUnitName: "କି.ଗ୍ରା" },
   { name: "ଗ୍ରାମ୍ (gm)", factor: 0.001, category: "Weight", baseUnitName: "କି.ଗ୍ରା" },
   { name: "କ୍ୱିଣ୍ଟାଲ୍ (Quintal)", factor: 100.0, category: "Weight", baseUnitName: "କି.ଗ୍ରା" },
-  { name: "লিଟର (Ltr)", factor: 1.0, category: "Volume", baseUnitName: "ଲିଟର" },
+  { name: "ଲିଟର (Ltr)", factor: 1.0, category: "Volume", baseUnitName: "ଲିଟର" },
   { name: "ମି.ଲି (ml)", factor: 0.001, category: "Volume", baseUnitName: "ଲିଟର" },
-  { name: "ଗୋটা (Pc)", factor: 1.0, category: "Count", baseUnitName: "ଗୋଟା" },
+  { name: "ଗୋଟା (Pc)", factor: 1.0, category: "Count", baseUnitName: "ଗୋଟା" },
   { name: "ଡଜନ (Dozen)", factor: 12.0, category: "Count", baseUnitName: "ଗୋଟା" },
 ];
 
@@ -200,7 +193,7 @@ export function getCalculationIdea(rateStr: string, qtyStr: string, unit: ShopUn
   const uName = unit.name.split(' ')[0];
 
   if (unit.factor === 1.0) {
-    return `• ୧ ${unit.baseUnitName} ର ଦାମ୍ = ₹${rOdia}\n• ଆପଣ ନେଉছেন = ${qOdia} ${uName}\n• ମୋଟ ଦାମ୍ = ${rOdia} × ${qOdia} = ₹${totalOdia}`;
+    return `• ୧ ${unit.baseUnitName} ର ଦାମ୍ = ₹${rOdia}\n• ଆପଣ ନେଉଛନ୍ତି = ${qOdia} ${uName}\n• ମୋଟ ଦାମ୍ = ${rOdia} × ${qOdia} = ₹${totalOdia}`;
   } else if (unit.factor === 0.001) {
     const ratePerSmall = rate / 1000;
     const rSmallOdia = toOdiaNum(formatNumberClean(ratePerSmall));
@@ -337,9 +330,9 @@ export function generateWordProblem(forcedTemplateIndex?: number): WordProblemDa
       const a = b * ans;
       return {
         templateIndex: 7,
-        question: `${toOdiaNum(a)} ଟି ଚକୋଲେট କୁ ${toOdiaNum(b)} ଜଣ ପିଲାଙ୍କ ମଧ୍ୟରେ ସମାନ ଭାବରେ ବାଣ୍ଟିଲେ ଜଣେ ପିଲା କେତୋଟି ଚକୋଲେଟ୍ ପାଇବ?`,
+        question: `${toOdiaNum(a)} ଟି ଚକୋଲେଟ୍ କୁ ${toOdiaNum(b)} ଜଣ ପିଲାଙ୍କ ମଧ୍ୟରେ ସମାନ ଭାବରେ ବାଣ୍ଟିଲେ ଜଣେ ପିଲା କେତୋଟି ଚକୋଲେଟ୍ ପାଇବ?`,
         answer: ans,
-        solution: `ମୋଟ ଚକୋଲେଟ୍ = ${toOdiaNum(a)} ଟି\nମୋଟ ପିଲା = ${toOdiaNum(b)} ଜଣ\nଜଣେ ପାଇব = ${toOdiaNum(a)} ÷ ${toOdiaNum(b)} = ${toOdiaNum(ans)} ଟି`
+        solution: `ମୋଟ ଚକୋଲେଟ୍ = ${toOdiaNum(a)} ଟି\nମୋଟ ପିଲା = ${toOdiaNum(b)} ଜଣ\nଜଣେ ପାଇବ = ${toOdiaNum(a)} ÷ ${toOdiaNum(b)} = ${toOdiaNum(ans)} ଟି`
       };
     }
     case 8: {
@@ -438,7 +431,7 @@ export function generateWordProblem(forcedTemplateIndex?: number): WordProblemDa
       const ans = (a * p1) + (b * p2);
       return {
         templateIndex: 16,
-        question: `ରାജୁ ଦୋକାନରୁ ${toOdiaNum(a)} ଟି ଖାତା (ଗୋଟାକୁ ${toOdiaNum(p1)} ଟଙ୍କା) ଏବଂ ${toOdiaNum(b)} ଟି ପେନସିଲ୍ (ଗୋଟାକୁ ${toOdiaNum(p2)} ଟଙ୍କା) କିଣିଲା । ସେ ଦୋକାନୀକୁ ମୋଟ କେତେ ଟଙ୍କା ଦେବ?`,
+        question: `ରାଜୁ ଦୋକାନରୁ ${toOdiaNum(a)} ଟି ଖାତା (ଗୋଟାକୁ ${toOdiaNum(p1)} ଟଙ୍କା) ଏବଂ ${toOdiaNum(b)} ଟି ପେନସିଲ୍ (ଗୋଟାକୁ ${toOdiaNum(p2)} ଟଙ୍କା) କିଣିଲା । ସେ ଦୋକାନୀକୁ ମୋଟ କେତେ ଟଙ୍କା ଦେବ?`,
         answer: ans,
         solution: `ଖାତା ଦାମ୍ = ${toOdiaNum(a)} × ${toOdiaNum(p1)} = ${toOdiaNum(a * p1)} ଟଙ୍କା\nପେନସିଲ୍ ଦାମ୍ = ${toOdiaNum(b)} × ${toOdiaNum(p2)} = ${toOdiaNum(b * p2)} ଟଙ୍କା\nମୋଟ ଦେବ = ${toOdiaNum(a * p1)} + ${toOdiaNum(b * p2)} = ${toOdiaNum(ans)} ଟଙ୍କା`
       };
@@ -473,7 +466,7 @@ export function generateWordProblem(forcedTemplateIndex?: number): WordProblemDa
       const ans = a - b;
       return {
         templateIndex: 19,
-        question: `ଗୋଟିଏ ঝୁଡ଼ିରେ ${toOdiaNum(a)} ଟି କମଳା ଥିଲା । ସେଥିରୁ ${toOdiaNum(b)} ଟି କମଳା ପଚିଗଲା । ଝୁଡ଼ିରେ ଆଉ କେତୋଟି ଭଲ କମଳା ଅଛି?`,
+        question: `ଗୋଟିଏ ଝୁଡ଼ିରେ ${toOdiaNum(a)} ଟି କମଳା ଥିଲା । ସେଥିରୁ ${toOdiaNum(b)} ଟି କମଳା ପଚିଗଲା । ଝୁଡ଼ିରେ ଆଉ କେତୋଟି ଭଲ କମଳା ଅଛି?`,
         answer: ans,
         solution: `ମୋଟ କମଳା = ${toOdiaNum(a)} ଟି\nପଚିଗଲା = ${toOdiaNum(b)} ଟି\nଭଲ କମଳା = ${toOdiaNum(a)} - ${toOdiaNum(b)} = ${toOdiaNum(ans)} ଟି`
       };
@@ -671,4 +664,16 @@ function speakFallback(text: string): void {
     }
   }
 }
+
+// --- App Download Footer Popup 24-Hour Cooldown Helper ---
+export const APP_POPUP_DISMISS_KEY = 'odia_app_popup_dismissed_at';
+export const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+
+export function shouldShowAppPopup(dismissedAtRaw: string | null, now = Date.now()): boolean {
+  if (!dismissedAtRaw) return true;
+  const dismissedAt = Number(dismissedAtRaw);
+  if (!Number.isFinite(dismissedAt) || dismissedAt <= 0) return true;
+  return now - dismissedAt >= ONE_DAY_MS;
+}
+
 

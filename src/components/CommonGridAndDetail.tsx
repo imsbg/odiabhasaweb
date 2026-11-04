@@ -175,7 +175,7 @@ export const CommonGridPage: React.FC<CommonGridPageProps> = ({
 
             <label className="flex items-center justify-between py-2 cursor-pointer">
               <div>
-                <div className="text-base font-medium text-slate-900">ଅବ্যବହୃତ ଅକ୍ଷର</div>
+                <div className="text-base font-medium text-slate-900">ଅବ୍ୟବହୃତ ଅକ୍ଷର</div>
                 <div className="text-xs text-slate-500">ୠ, ଌ, ୡ ଆଦି ଅକ୍ଷର ଦେଖାନ୍ତୁ</div>
               </div>
               <input

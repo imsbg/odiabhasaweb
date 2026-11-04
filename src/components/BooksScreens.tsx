@@ -1393,7 +1393,7 @@ const BookReaderView: React.FC<{
 
             {/* Font Size */}
             <div className="space-y-2">
-              <div className="text-sm font-bold">অକ୍ଷର ଆକାର ({toOdiaNum(fontSize)})</div>
+              <div className="text-sm font-bold">ଅକ୍ଷର ଆକାର ({toOdiaNum(fontSize)})</div>
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setFontSize(s => Math.max(12, s - 1))}

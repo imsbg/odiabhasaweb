@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Screen, swarabarnaList } from './data/odiaData';
-import { parseRouteFromLocation, getOdiaUrlPath } from './utils/odiaUtils';
+import {
+  parseRouteFromLocation,
+  getOdiaUrlPath,
+  APP_POPUP_DISMISS_KEY,
+  shouldShowAppPopup
+} from './utils/odiaUtils';
 import { HomeScreen } from './components/HomeScreen';
 import { CommonGridPage, DetailScreen } from './components/CommonGridAndDetail';
 import { WritingPracticeScreen } from './components/WritingPracticeScreen';
@@ -40,7 +45,8 @@ import {
   AsaJanibaScreen,
   MenuScreen,
   AboutScreen,
-  DeepLinksModal
+  DeepLinksModal,
+  AppBannerPopup
 } from './components/ExploreAndMenuScreens';
 
 export default function App() {
@@ -52,6 +58,22 @@ export default function App() {
   const [selectedChar, setSelectedChar] = useState<string>('ଅ');
   const [selectedCharList, setSelectedCharList] = useState<string[]>(swarabarnaList);
   const [showDeepLinksModal, setShowDeepLinksModal] = useState(false);
+  const [showAppPopup, setShowAppPopup] = useState<boolean>(() => {
+    try {
+      return shouldShowAppPopup(localStorage.getItem(APP_POPUP_DISMISS_KEY));
+    } catch {
+      return true;
+    }
+  });
+
+  const handleDismissAppPopup = useCallback(() => {
+    try {
+      localStorage.setItem(APP_POPUP_DISMISS_KEY, String(Date.now()));
+    } catch {
+      // Ignore storage errors
+    }
+    setShowAppPopup(false);
+  }, []);
 
   const navigateTo = useCallback((screen: Screen) => {
     setCurrentScreen(screen);
@@ -271,6 +293,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F5F7FA] text-slate-900">
       {renderScreen()}
+
+      {showAppPopup && (
+        <AppBannerPopup
+          currentScreen={currentScreen}
+          onDismiss={handleDismissAppPopup}
+        />
+      )}
 
       {showDeepLinksModal && (
         <DeepLinksModal

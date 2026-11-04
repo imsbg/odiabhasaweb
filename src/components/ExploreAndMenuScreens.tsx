@@ -1967,41 +1967,75 @@ export const AppBannerPopup: React.FC<{
   onDismiss: () => void;
 }> = ({ currentScreen, onDismiss }) => {
   const deepLinkUrl = `https://odiabhasa.pages.dev/open?${currentScreen}`;
+  const playStoreUrl = 'https://play.google.com/store/apps/details?id=in.sandeep.odiabhasa&hl=or';
+  const isHome = currentScreen === Screen.HOME || currentScreen === Screen.SPLASH;
+
   return (
-    <div className="fixed bottom-16 left-0 right-0 z-30 px-4 pointer-events-none">
-      <div className="max-w-md mx-auto bg-white/95 backdrop-blur-md border border-slate-200 rounded-2xl p-3 shadow-lg flex items-center justify-between gap-3 pointer-events-auto">
-        <div className="flex items-center gap-2.5 min-w-0">
-          <img
-            src="/assets/odiabhasa/ic_launcher-playstore.png"
-            alt="ଓଡ଼ିଆ ଭାଷା"
-            className="w-10 h-10 rounded-xl shrink-0"
-          />
-          <div className="min-w-0">
-            <div className="text-xs font-black text-slate-900 truncate">ଓଡ଼ିଆ ଭାଷା ଆପ୍</div>
-            <div className="text-[11px] font-semibold text-slate-500 truncate">
-              ଆଣ୍ଡ୍ରଏଡ୍ ଆପ୍‌ରେ ଖୋଲନ୍ତୁ
+    <div
+      role="region"
+      aria-label="ଆପ୍ ଡାଉନଲୋଡ୍ ପପ୍-ଅପ୍"
+      className={`fixed left-0 right-0 z-[300] px-3 pt-2 pointer-events-none transition-all ${
+        isHome ? 'bottom-[96px] pb-1' : 'bottom-0 pb-3'
+      }`}
+    >
+      <div className="max-w-lg mx-auto bg-white border-2 border-[#6200EE]/25 rounded-2xl p-3.5 shadow-[0_-4px_24px_rgba(0,0,0,0.16)] pointer-events-auto">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex items-center gap-3 min-w-0">
+            <img
+              src="/assets/odiabhasa/ic_launcher-playstore.png"
+              alt="ଓଡ଼ିଆ ଭାଷା ଆପ୍"
+              className="w-11 h-11 rounded-xl shrink-0 shadow-sm border border-slate-100"
+            />
+            <div className="min-w-0">
+              <div className="text-sm font-black text-slate-900 truncate">
+                ଓଡ଼ିଆ ଭାଷା ଆପ୍ (Odia Bhasa App)
+              </div>
+              <div className="text-xs font-semibold text-slate-600 leading-snug">
+                ସମ୍ପୂର୍ଣ୍ଣ ଅଭିଜ୍ଞତା ପାଇଁ ଆପ୍‌ରେ ଖୋଲନ୍ତୁ କିମ୍ବା ଡାଉନଲୋଡ୍ କରନ୍ତୁ
+              </div>
             </div>
           </div>
+
+          <button
+            onClick={onDismiss}
+            aria-label="ପପ୍-ଅପ୍ ବନ୍ଦ କରନ୍ତୁ"
+            className="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 shrink-0 cursor-pointer"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
 
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="mt-3 grid grid-cols-2 gap-2.5">
           <a
             href={deepLinkUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 rounded-xl bg-[#6200EE] text-white font-bold text-xs"
+            className="py-2.5 px-3 rounded-xl bg-[#6200EE] hover:bg-[#5000C9] text-white font-black text-xs sm:text-sm text-center shadow-sm transition flex items-center justify-center gap-1.5"
           >
-            ଆପ୍ ଖୋଲନ୍ତୁ
+            <span>📱 ଆପ୍ ରେ ଖୋଲନ୍ତୁ</span>
           </a>
           <button
+            type="button"
             onClick={onDismiss}
-            aria-label="ବ୍ୟାନର୍ ବନ୍ଦ କରନ୍ତୁ"
-            className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 cursor-pointer"
+            className="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm text-center border border-slate-200 transition cursor-pointer"
           >
-            <X className="w-4 h-4" />
+            ବ୍ରାଉଜର୍ ରେ ଜାରି ରଖନ୍ତୁ
           </button>
+        </div>
+
+        <div className="mt-2 flex items-center justify-between text-[11px] text-slate-500 px-1">
+          <span>୧ ଦିନ ପାଇଁ ବନ୍ଦ କରିବାକୁ &lsquo;ବ୍ରାଉଜର୍ ରେ ଜାରି ରଖନ୍ତୁ&rsquo; ଦବାନ୍ତୁ</span>
+          <a
+            href={playStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-[#6200EE] hover:underline shrink-0 ml-2"
+          >
+            Play Store ↗
+          </a>
         </div>
       </div>
     </div>
   );
 };
+

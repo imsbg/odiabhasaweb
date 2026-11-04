@@ -289,7 +289,7 @@ export const UtilityCategoryScreen: React.FC<{
     {
       screen: Screen.UTILITY_CONVERTER,
       title: 'ଏକକ ପରିବର୍ତ୍ତନ',
-      subtitle: 'ଲମ୍ବ, ଓଜନ ଓ ସମୟ ମାপ',
+      subtitle: 'ଲମ୍ବ, ଓଜନ ଓ ସମୟ ମାପ',
       bg: 'bg-[#26A69A]',
       icon: ArrowRightLeft
     },
@@ -438,7 +438,7 @@ export const PanikiaScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             {/* Section 2: ଶବ୍ଦ ତାଲିକା (Script Table View) */}
             <div className="space-y-2">
               <span className="inline-block bg-[#00E676] text-black border-2 border-black rounded-lg px-3 py-1 text-[14px] font-black">
-                ଶବ୍ଦ ତାଲିକା (উଚ୍ଚାରଣ)
+                ଶବ୍ଦ ତାଲିକା (ଉଚ୍ଚାରଣ)
               </span>
               <div className="bg-[#FFF9C4] rounded-[20px] border-[3px] border-black shadow-[0_8px_0_#000] p-4 divide-y divide-black/10">
                 {rows.map(row => (
@@ -825,24 +825,12 @@ const UNITS_BY_CATEGORY: Record<UnitCategoryDef['key'], UnitItem[]> = {
     { id: 'yr', odiaName: 'ବର୍ଷ (୩୬୫ ଦିନ)', englishName: 'Year', symbol: 'ବର୍ଷ', factorToBase: 31536000.0 }
   ],
   Digital: [
-    { id: 'b', odiaName: 'বাইଟ୍', englishName: 'Byte', symbol: 'B', factorToBase: 1.0 },
-    { id: 'kb', odiaName: 'କିଲୋবাইଟ୍', englishName: 'Kilobyte', symbol: 'KB', factorToBase: 1024.0 },
-    { id: 'mb', odiaName: 'ମେଗାবাইଟ୍', englishName: 'Megabyte', symbol: 'MB', factorToBase: Math.pow(1024.0, 2) },
-    { id: 'gb', odiaName: 'ጊଗାবাইଟ୍', englishName: 'Gigabyte', symbol: 'GB', factorToBase: Math.pow(1024.0, 3) },
-    { id: 'tb', odiaName: 'ଟେରାবাইଟ୍', englishName: 'Terabyte', symbol: 'TB', factorToBase: Math.pow(1024.0, 4) }
-  ].map(item => ({
-    ...item,
-    odiaName:
-      item.id === 'b'
-        ? 'ବାଇଟ୍'
-        : item.id === 'kb'
-        ? 'କିଲୋବାଇଟ୍'
-        : item.id === 'mb'
-        ? 'ମେଗାବାଇଟ୍'
-        : item.id === 'gb'
-        ? 'ଗିଗାବାଇଟ୍'
-        : 'ଟେରାବାଇଟ୍'
-  }))
+    { id: 'b', odiaName: 'ବାଇଟ୍', englishName: 'Byte', symbol: 'B', factorToBase: 1.0 },
+    { id: 'kb', odiaName: 'କିଲୋବାଇଟ୍', englishName: 'Kilobyte', symbol: 'KB', factorToBase: 1024.0 },
+    { id: 'mb', odiaName: 'ମେଗାବାଇଟ୍', englishName: 'Megabyte', symbol: 'MB', factorToBase: Math.pow(1024.0, 2) },
+    { id: 'gb', odiaName: 'ଗିଗାବାଇଟ୍', englishName: 'Gigabyte', symbol: 'GB', factorToBase: Math.pow(1024.0, 3) },
+    { id: 'tb', odiaName: 'ଟେରାବାଇଟ୍', englishName: 'Terabyte', symbol: 'TB', factorToBase: Math.pow(1024.0, 4) }
+  ]
 };
 
 function convertUnitValue(
