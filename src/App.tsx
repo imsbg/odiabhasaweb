@@ -50,7 +50,19 @@ import {
 } from './components/ExploreAndMenuScreens';
 
 export default function App() {
-  const initialRoute = parseRouteFromLocation(window.location.pathname, window.location.search);
+  const initialRoute = (() => {
+    try {
+      const redirectedPath = sessionStorage.getItem('odia_spa_redirect_path');
+      if (redirectedPath) {
+        sessionStorage.removeItem('odia_spa_redirect_path');
+        const urlObj = new URL(redirectedPath, window.location.origin);
+        return parseRouteFromLocation(urlObj.pathname, urlObj.search);
+      }
+    } catch {
+      // Ignore sessionStorage errors
+    }
+    return parseRouteFromLocation(window.location.pathname, window.location.search);
+  })();
 
   const [currentScreen, setCurrentScreen] = useState<Screen>(initialRoute.screen);
   const [bahiIdParam, setBahiIdParam] = useState<string | undefined>(initialRoute.bahiId);
@@ -83,19 +95,37 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    // Normalize initial URL to Odia path if opened via query param (unless ?Bahi=...)
-    if (window.location.search && !initialRoute.bahiId && initialRoute.screen !== Screen.HOME) {
-      window.history.replaceState({ screen: initialRoute.screen }, '', getOdiaUrlPath(initialRoute.screen));
+    // 1. If user visited a 404 / unknown URL, redirect browser URL to Home ('/')
+    if (initialRoute.isNotFound) {
+      setCurrentScreen(Screen.HOME);
+      window.history.replaceState({ screen: Screen.HOME }, '', '/');
+    } else if (initialRoute.screen === Screen.HOME && !initialRoute.bahiId) {
+      // Ensure Home screen always shows clean '/' URL
+      if (window.location.pathname !== '/' || window.location.search !== '') {
+        window.history.replaceState({ screen: Screen.HOME }, '', '/');
+      }
+    } else if (!initialRoute.bahiId && initialRoute.screen !== Screen.HOME) {
+      // Ensure valid screen refresh or deep-link shows its canonical Odia path
+      const canonicalPath = getOdiaUrlPath(initialRoute.screen);
+      if (decodeURIComponent(window.location.pathname) !== canonicalPath || window.location.search !== '') {
+        window.history.replaceState({ screen: initialRoute.screen }, '', canonicalPath);
+      }
     }
 
     const handlePopState = () => {
       const parsed = parseRouteFromLocation(window.location.pathname, window.location.search);
+      if (parsed.isNotFound) {
+        setCurrentScreen(Screen.HOME);
+        setBahiIdParam(undefined);
+        window.history.replaceState({ screen: Screen.HOME }, '', '/');
+        return;
+      }
       setCurrentScreen(parsed.screen);
       setBahiIdParam(parsed.bahiId);
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [initialRoute.bahiId, initialRoute.screen]);
+  }, [initialRoute.bahiId, initialRoute.isNotFound, initialRoute.screen]);
 
   const renderScreen = () => {
     switch (currentScreen) {

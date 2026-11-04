@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="or">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ଓଡ଼ିଆ ଭାଷା (Odia Bhasa)</title>
+    <script>
+      // Save the requested path so the SPA router can either open the matching Odia screen
+      // or redirect unknown 404 paths to the Home screen ('/').
+      try {
+        sessionStorage.setItem(
+          'odia_spa_redirect_path',
+          window.location.pathname + window.location.search + window.location.hash
+        );
+      } catch (e) {}
+      window.location.replace('/');
+    </script>
+  </head>
+  <body></body>
+</html>

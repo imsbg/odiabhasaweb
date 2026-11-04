@@ -86,18 +86,20 @@ test('generateWordProblem covers all 22 templates with valid answers and no Beng
   }
 });
 
-test('parseDeepLinkFromSearch and Odia URL path routing', () => {
-  assert.deepEqual(parseDeepLinkFromSearch('?HOME'), { screen: Screen.HOME });
-  assert.deepEqual(parseDeepLinkFromSearch('?SWARA'), { screen: Screen.SWARA });
-  assert.deepEqual(parseDeepLinkFromSearch('?CLASS_10'), { screen: Screen.CLASS_10 });
-  assert.deepEqual(parseDeepLinkFromSearch('?GAME_SUDOKU'), { screen: Screen.GAME_SUDOKU });
-  assert.deepEqual(parseDeepLinkFromSearch('?open=HARMONIUM'), { screen: Screen.HARMONIUM });
-  assert.deepEqual(parseDeepLinkFromSearch('?Bahi=bahi_123'), { screen: Screen.BAHI, bahiId: 'bahi_123' });
+test('parseDeepLinkFromSearch and Odia URL path routing with 404 detection', () => {
+  assert.deepEqual(parseDeepLinkFromSearch('?HOME'), { screen: Screen.HOME, isValidSearch: true });
+  assert.deepEqual(parseDeepLinkFromSearch('?SWARA'), { screen: Screen.SWARA, isValidSearch: true });
+  assert.deepEqual(parseDeepLinkFromSearch('?CLASS_10'), { screen: Screen.CLASS_10, isValidSearch: true });
+  assert.deepEqual(parseDeepLinkFromSearch('?GAME_SUDOKU'), { screen: Screen.GAME_SUDOKU, isValidSearch: true });
+  assert.deepEqual(parseDeepLinkFromSearch('?open=HARMONIUM'), { screen: Screen.HARMONIUM, isValidSearch: true });
+  assert.deepEqual(parseDeepLinkFromSearch('?Bahi=bahi_123'), { screen: Screen.BAHI, bahiId: 'bahi_123', isValidSearch: true });
 
   assert.equal(getOdiaUrlPath(Screen.ODIA_CALENDAR), '/ଓଡ଼ିଆ-କ୍ୟାଲେଣ୍ଡର/');
   assert.equal(getOdiaUrlPath(Screen.ASA_JANIBA), '/ଆସ-ଜାଣିବା/');
-  assert.deepEqual(parseRouteFromLocation('/ଓଡ଼ିଆ-କ୍ୟାଲେଣ୍ଡର/', ''), { screen: Screen.ODIA_CALENDAR });
-  assert.deepEqual(parseRouteFromLocation(encodeURI('/ଆସ-ଜାଣିବା/'), ''), { screen: Screen.ASA_JANIBA });
+  assert.deepEqual(parseRouteFromLocation('/ଓଡ଼ିଆ-କ୍ୟାଲେଣ୍ଡର/', ''), { screen: Screen.ODIA_CALENDAR, isNotFound: false });
+  assert.deepEqual(parseRouteFromLocation(encodeURI('/ଆସ-ଜାଣିବା/'), ''), { screen: Screen.ASA_JANIBA, isNotFound: false });
+  assert.deepEqual(parseRouteFromLocation('/unknown-404-page', ''), { screen: Screen.HOME, isNotFound: true });
+  assert.deepEqual(parseRouteFromLocation('/କିଛି-ନାହିଁ/', ''), { screen: Screen.HOME, isNotFound: true });
 });
 
 test('Open Web API v1 data generators for Home Barnabodha and Number to Word', () => {

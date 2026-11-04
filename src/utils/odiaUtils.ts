@@ -567,34 +567,65 @@ export function getOdiaUrlPath(screen: Screen): string {
   return `/${slug}/`;
 }
 
-export function parseDeepLinkFromSearch(search: string): { screen: Screen; bahiId?: string } {
+export function normalizeOdiaSlug(str: string): string {
+  return str
+    .normalize('NFD')
+    .replace(/\u0B5C/g, '\u0B21\u0B3C')
+    .replace(/\u0B5D/g, '\u0B22\u0B3C')
+    .replace(/^\/+|\/+$/g, '')
+    .trim();
+}
+
+export function parseDeepLinkFromSearch(
+  search: string
+): { screen: Screen; bahiId?: string; isValidSearch: boolean } {
   const clean = search.replace(/^\?/, '').trim();
-  if (!clean) return { screen: Screen.HOME };
+  if (!clean) return { screen: Screen.HOME, isValidSearch: false };
 
   const params = new URLSearchParams(clean);
   const bahiId = params.get('Bahi') || params.get('bahi');
   if (bahiId) {
-    return { screen: Screen.BAHI, bahiId };
+    return { screen: Screen.BAHI, bahiId, isValidSearch: true };
   }
 
   const openParam = params.get('open') || params.get('screen');
-  const candidate = (openParam || clean.split('&')[0].split('=')[0]).toUpperCase().trim();
+  const rawCandidate = (openParam || clean.split('&')[0].split('=')[0]).trim();
+  const candidate = rawCandidate.toUpperCase();
 
   if (candidate in Screen) {
-    return { screen: Screen[candidate as keyof typeof Screen] };
+    return { screen: Screen[candidate as keyof typeof Screen], isValidSearch: true };
   }
-  return { screen: Screen.HOME };
+
+  // Also check if query param is an Odia slug (e.g. ?ଓଡ଼ିଆ-କ୍ୟାଲେଣ୍ଡର)
+  let decodedQuery = rawCandidate;
+  try {
+    decodedQuery = decodeURIComponent(rawCandidate);
+  } catch {
+    decodedQuery = rawCandidate;
+  }
+  const normalizedQuery = normalizeOdiaSlug(decodedQuery);
+  for (const [screenKey, slug] of Object.entries(SCREEN_TO_ODIA_SLUG)) {
+    if (slug && normalizeOdiaSlug(slug) === normalizedQuery) {
+      return { screen: screenKey as Screen, isValidSearch: true };
+    }
+  }
+
+  return { screen: Screen.HOME, isValidSearch: false };
 }
 
 export function parseRouteFromLocation(
   pathname: string,
   search: string
-): { screen: Screen; bahiId?: string } {
+): { screen: Screen; bahiId?: string; isNotFound?: boolean } {
   // Check query string first if present
   if (search && search.replace(/^\?/, '').trim() !== '') {
     const fromSearch = parseDeepLinkFromSearch(search);
-    if (fromSearch.screen !== Screen.HOME || fromSearch.bahiId) {
-      return fromSearch;
+    if (fromSearch.isValidSearch) {
+      return {
+        screen: fromSearch.screen,
+        bahiId: fromSearch.bahiId,
+        isNotFound: false
+      };
     }
   }
 
@@ -606,22 +637,27 @@ export function parseRouteFromLocation(
   }
 
   const cleanSlug = decodedPath.replace(/^\/+|\/+$/g, '').trim();
-  if (!cleanSlug) return { screen: Screen.HOME };
+  if (!cleanSlug || cleanSlug.toLowerCase() === 'index.html' || cleanSlug.toLowerCase() === 'open') {
+    return { screen: Screen.HOME, isNotFound: false };
+  }
 
-  // Match against Odia slugs
+  const normalizedInput = normalizeOdiaSlug(cleanSlug);
+
+  // Match against Odia slugs (with canonical Unicode normalization)
   for (const [screenKey, slug] of Object.entries(SCREEN_TO_ODIA_SLUG)) {
-    if (slug && slug === cleanSlug) {
-      return { screen: screenKey as Screen };
+    if (slug && normalizeOdiaSlug(slug) === normalizedInput) {
+      return { screen: screenKey as Screen, isNotFound: false };
     }
   }
 
   // Match against Screen enum keys case-insensitively
   const upper = cleanSlug.replace(/-/g, '_').toUpperCase();
   if (upper in Screen) {
-    return { screen: Screen[upper as keyof typeof Screen] };
+    return { screen: Screen[upper as keyof typeof Screen], isNotFound: false };
   }
 
-  return { screen: Screen.HOME };
+  // Any other path is a 404 / Not Found route -> redirect to HOME
+  return { screen: Screen.HOME, isNotFound: true };
 }
 
 // --- Audio Playback Helper ---

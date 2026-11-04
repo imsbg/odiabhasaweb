@@ -1,4 +1,5 @@
 import express from 'express';
+import fs from 'fs';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import {
@@ -13,6 +14,23 @@ import {
   getNumberToWordApiData,
   buildCharacterItem
 } from './src/utils/openApiData';
+
+const STATIC_FILE_EXT_RE = /\.(js|mjs|cjs|ts|tsx|jsx|css|png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|ogg|woff|woff2|ttf|otf|json|webmanifest|map|txt|xml)$/i;
+
+function isSpaRouteRequest(reqUrl: string): boolean {
+  const cleanPath = reqUrl.split('?')[0];
+  if (
+    cleanPath.startsWith('/api') ||
+    cleanPath.startsWith('/src/') ||
+    cleanPath.startsWith('/@') ||
+    cleanPath.startsWith('/node_modules/') ||
+    cleanPath.startsWith('/assets/') ||
+    cleanPath === '/sw.js'
+  ) {
+    return false;
+  }
+  return !STATIC_FILE_EXT_RE.test(cleanPath);
+}
 
 async function startServer() {
   const app = express();
@@ -127,7 +145,29 @@ async function startServer() {
       server: { middlewareMode: true },
       appType: 'spa'
     });
+
+    // Rewrite SPA routes (including Odia URL paths and 404 routes) to '/' before Vite middleware
+    app.use((req, _res, next) => {
+      if ((req.method === 'GET' || req.method === 'HEAD') && isSpaRouteRequest(req.url)) {
+        req.url = '/';
+      }
+      next();
+    });
+
     app.use(vite.middlewares);
+
+    // Final SPA fallback for any unmatched GET request (e.g. unknown .html or 404 paths)
+    app.use('*', async (req, res, next) => {
+      if (req.originalUrl.startsWith('/api')) return next();
+      try {
+        const indexPath = path.resolve(process.cwd(), 'index.html');
+        let template = fs.readFileSync(indexPath, 'utf-8');
+        template = await vite.transformIndexHtml('/', template);
+        res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
+      } catch (err) {
+        next(err);
+      }
+    });
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
@@ -142,3 +182,4 @@ async function startServer() {
 }
 
 startServer();
+
