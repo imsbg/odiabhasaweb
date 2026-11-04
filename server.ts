@@ -12,7 +12,8 @@ import {
   getYuktaksharaApiData,
   getSankhyaApiData,
   getNumberToWordApiData,
-  buildCharacterItem
+  buildCharacterItem,
+  resolveOpenApiV1Request
 } from './src/utils/openApiData';
 
 const STATIC_FILE_EXT_RE = /\.(js|mjs|cjs|ts|tsx|jsx|css|png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|ogg|woff|woff2|ttf|otf|json|webmanifest|map|txt|xml)$/i;
@@ -46,38 +47,11 @@ async function startServer() {
 
   // Main /api/v1 and /api/v1/ endpoint
   app.get(['/api/v1', '/api/v1/'], (req, res) => {
-    const numQuery = req.query.num ?? req.query.number ?? req.query.n;
-    if (numQuery !== undefined) {
-      return res.json(getNumberToWordApiData(String(numQuery)));
-    }
-
-    const typeQuery = String(req.query.type ?? req.query.section ?? '').toLowerCase().trim();
-    if (typeQuery) {
-      if (typeQuery === 'swara' || typeQuery === 'swarabarna' || typeQuery === 'ସ୍ୱରବର୍ଣ୍ଣ') {
-        return res.json(getSwarabarnaApiData());
-      }
-      if (typeQuery === 'byanjana' || typeQuery === 'byanjanabarna' || typeQuery === 'ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ' || typeQuery === 'କ') {
-        return res.json(getByanjanabarnaApiData());
-      }
-      if (typeQuery === 'barna_parichaya' || typeQuery === 'barna-parichaya' || typeQuery === 'ବର୍ଣ୍ଣ ପରିଚୟ' || typeQuery === 'ବର୍ଣ୍ଣ') {
-        return res.json(getBarnaParichayaApiData());
-      }
-      if (typeQuery === 'matra' || typeQuery === 'ମାତ୍ରା' || typeQuery === 'ା') {
-        return res.json(getMatraApiData());
-      }
-      if (typeQuery === 'phala' || typeQuery === 'ଫଳା' || typeQuery === '୍ୟ') {
-        return res.json(getPhalaApiData());
-      }
-      if (typeQuery === 'yukta' || typeQuery === 'yuktakshara' || typeQuery === 'ଯୁକ୍ତାକ୍ଷର' || typeQuery === 'ଙ୍କ') {
-        return res.json(getYuktaksharaApiData());
-      }
-      if (typeQuery === 'sankhya' || typeQuery === 'ସଂଖ୍ୟା' || typeQuery === '୦') {
-        return res.json(getSankhyaApiData());
-      }
-    }
-
     const baseUrl = `${req.protocol}://${req.get('host')}`;
-    return res.json(getAllHomeBarnabodhaApiData(baseUrl));
+    const qIndex = req.originalUrl.indexOf('?');
+    const search = qIndex !== -1 ? req.originalUrl.slice(qIndex) : '';
+    const result = resolveOpenApiV1Request(req.path, search, baseUrl);
+    return res.status(result.status).json(result.data);
   });
 
   // /api/v1/barnabodha -> All 7 Home Barnabodha sections
@@ -138,6 +112,15 @@ async function startServer() {
 
   app.get('/api/v1/number-to-word/:number', (req, res) => {
     res.json(getNumberToWordApiData(decodeURIComponent(req.params.number)));
+  });
+
+  // Catch-all for any other /api/v1/* variation (trailing slashes, Odia slugs, .json)
+  app.get('/api/*', (req, res) => {
+    const baseUrl = `${req.protocol}://${req.get('host')}`;
+    const qIndex = req.originalUrl.indexOf('?');
+    const search = qIndex !== -1 ? req.originalUrl.slice(qIndex) : '';
+    const result = resolveOpenApiV1Request(req.path, search, baseUrl);
+    res.status(result.status).json(result.data);
   });
 
   if (process.env.NODE_ENV !== 'production') {

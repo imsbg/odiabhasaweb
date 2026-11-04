@@ -22,7 +22,9 @@ import { Screen, getCharDetails, swarabarnaList } from '../data/odiaData.ts';
 import {
   getAllHomeBarnabodhaApiData,
   getSwarabarnaApiData,
-  getNumberToWordApiData
+  getNumberToWordApiData,
+  isOpenApiPath,
+  resolveOpenApiV1Request
 } from './openApiData.ts';
 
 test('toOdiaNum and fromOdiaNum round-trip conversion', () => {
@@ -100,9 +102,11 @@ test('parseDeepLinkFromSearch and Odia URL path routing with 404 detection', () 
   assert.deepEqual(parseRouteFromLocation(encodeURI('/ଆସ-ଜାଣିବା/'), ''), { screen: Screen.ASA_JANIBA, isNotFound: false });
   assert.deepEqual(parseRouteFromLocation('/unknown-404-page', ''), { screen: Screen.HOME, isNotFound: true });
   assert.deepEqual(parseRouteFromLocation('/କିଛି-ନାହିଁ/', ''), { screen: Screen.HOME, isNotFound: true });
+  // Ensure /api/v1/* is never marked as isNotFound
+  assert.deepEqual(parseRouteFromLocation('/api/v1/number-to-word', '?num=125'), { screen: Screen.HOME, isNotFound: false });
 });
 
-test('Open Web API v1 data generators for Home Barnabodha and Number to Word', () => {
+test('Open Web API v1 data generators and resolveOpenApiV1Request for static & server hosts', () => {
   const allBarnabodha = getAllHomeBarnabodhaApiData();
   assert.equal(allBarnabodha.sections.length, 7);
   const swara = getSwarabarnaApiData();
@@ -112,6 +116,38 @@ test('Open Web API v1 data generators for Home Barnabodha and Number to Word', (
   assert.equal(numWord.number, 125);
   assert.equal(numWord.odiaWord, 'ଶହେ ପଚିଶ');
   assert.equal(numWord.englishWord, 'One Hundred Twenty Five');
+
+  assert.equal(isOpenApiPath('/api/v1/number-to-word'), true);
+  assert.equal(isOpenApiPath('/api/v1/'), true);
+  assert.equal(isOpenApiPath('/ଓଡ଼ିଆ-କ୍ୟାଲେଣ୍ଡର/'), false);
+
+  const resNum = resolveOpenApiV1Request('/api/v1/number-to-word', '?num=125', 'https://odiabhasa.netlify.app');
+  assert.equal(resNum.status, 200);
+  assert.equal((resNum.data as { odiaWord: string }).odiaWord, 'ଶହେ ପଚିଶ');
+
+  const resNumPath = resolveOpenApiV1Request('/api/v1/number-to-word/125', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resNumPath.data as { odiaWord: string }).odiaWord, 'ଶହେ ପଚିଶ');
+
+  const resSwara = resolveOpenApiV1Request('/api/v1/swarabarna', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resSwara.data as { key: string }).key, 'swarabarna');
+
+  const resByanjana = resolveOpenApiV1Request('/api/v1/byanjanabarna', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resByanjana.data as { key: string }).key, 'byanjanabarna');
+
+  const resBarna = resolveOpenApiV1Request('/api/v1/barna-parichaya', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resBarna.data as { key: string }).key, 'barna_parichaya');
+
+  const resMatra = resolveOpenApiV1Request('/api/v1/matra', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resMatra.data as { key: string }).key, 'matra');
+
+  const resPhala = resolveOpenApiV1Request('/api/v1/phala', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resPhala.data as { key: string }).key, 'phala');
+
+  const resYukta = resolveOpenApiV1Request('/api/v1/yuktakshara', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resYukta.data as { key: string }).key, 'yuktakshara');
+
+  const resSankhya = resolveOpenApiV1Request('/api/v1/sankhya', '', 'https://odiabhasa.netlify.app');
+  assert.equal((resSankhya.data as { key: string }).key, 'sankhya');
 });
 
 test('odiaData character lists and dictionary integrity', () => {

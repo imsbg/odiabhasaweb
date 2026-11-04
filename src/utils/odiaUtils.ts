@@ -617,6 +617,18 @@ export function parseRouteFromLocation(
   pathname: string,
   search: string
 ): { screen: Screen; bahiId?: string; isNotFound?: boolean } {
+  let decodedPath = pathname;
+  try {
+    decodedPath = decodeURIComponent(pathname);
+  } catch {
+    decodedPath = pathname;
+  }
+
+  // Never treat /api/* endpoints as 404 or redirect them to Home
+  if (decodedPath === '/api' || decodedPath.startsWith('/api/')) {
+    return { screen: Screen.HOME, isNotFound: false };
+  }
+
   // Check query string first if present
   if (search && search.replace(/^\?/, '').trim() !== '') {
     const fromSearch = parseDeepLinkFromSearch(search);
@@ -627,13 +639,6 @@ export function parseRouteFromLocation(
         isNotFound: false
       };
     }
-  }
-
-  let decodedPath = pathname;
-  try {
-    decodedPath = decodeURIComponent(pathname);
-  } catch {
-    decodedPath = pathname;
   }
 
   const cleanSlug = decodedPath.replace(/^\/+|\/+$/g, '').trim();
