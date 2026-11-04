@@ -1,0 +1,82 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+  edge_functions = "netlify/edge-functions"
+
+[[edge_functions]]
+  path = "/api/*"
+  function = "api"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+    Content-Type = "application/json; charset=utf-8"
+
+[[redirects]]
+  from = "/api/v1/barnabodha"
+  to = "/api/v1/barnabodha.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/swarabarna"
+  to = "/api/v1/swarabarna.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/swara"
+  to = "/api/v1/swarabarna.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/byanjanabarna"
+  to = "/api/v1/byanjanabarna.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/byanjana"
+  to = "/api/v1/byanjanabarna.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/barna-parichaya"
+  to = "/api/v1/barna-parichaya.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/barna_parichaya"
+  to = "/api/v1/barna-parichaya.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/matra"
+  to = "/api/v1/matra.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/phala"
+  to = "/api/v1/phala.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/yuktakshara"
+  to = "/api/v1/yuktakshara.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/yukta"
+  to = "/api/v1/yuktakshara.json"
+  status = 200
+
+[[redirects]]
+  from = "/api/v1/sankhya"
+  to = "/api/v1/sankhya.json"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

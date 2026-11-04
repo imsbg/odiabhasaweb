@@ -1,0 +1,176 @@
+{
+  "status": "success",
+  "section": "ସ୍ୱରବର୍ଣ୍ଣ",
+  "titleOdia": "ସ୍ୱରବର୍ଣ୍ଣ",
+  "key": "swarabarna",
+  "symbol": "ଅ",
+  "total": 14,
+  "count": 14,
+  "items": [
+    {
+      "symbol": "ଅ",
+      "words": [
+        "ଅରଟ",
+        "ଅଜା"
+      ],
+      "sentences": [
+        "ଅରଟ ରେ ସୂତା ବୁଣା ଯାଏ ।",
+        "ମୋ ଅଜା ମୋତେ ବହୁତ ଭଲ ପାଆନ୍ତି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଅ.mp3"
+    },
+    {
+      "symbol": "ଆ",
+      "words": [
+        "ଆକାଶ",
+        "ଆମ"
+      ],
+      "sentences": [
+        "ଆକାଶର ରଙ୍ଗ ନୀଳ ।",
+        "ଆମ ଦେଶର ନାମ ଭାରତ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଆ.mp3"
+    },
+    {
+      "symbol": "ଇ",
+      "words": [
+        "ନାମ: ହର୍ଷ ଇ",
+        "ଇଟା",
+        "ଇଛା"
+      ],
+      "sentences": [
+        "ଇଟାରେ ଘର ତିଆରି ହୁଏ ।",
+        "ମୋର ପଢିବାକୁ ଇଛା ଅଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଇ.mp3"
+    },
+    {
+      "symbol": "ଈ",
+      "words": [
+        "ନାମ: ଦୀର୍ଘ ଈ",
+        "ଈଶ୍ୱର",
+        "ଈର୍ଷା"
+      ],
+      "sentences": [
+        "ଈଶ୍ୱର ସବୁଠାରେ ଅଛନ୍ତି ।",
+        "କାହା ପ୍ରତି ଈର୍ଷା କରିବା ଉଚିତ୍ ନୁହେଁ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଈ.mp3"
+    },
+    {
+      "symbol": "ଉ",
+      "words": [
+        "ନାମ: ହର୍ଷ ଉ",
+        "ଉପର",
+        "ଉଠ"
+      ],
+      "sentences": [
+        "ଟେବୁଲ ଉପରେ ବହି ଅଛି ।",
+        "ସକାଳୁ ଜଲଦି ଉଠ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଉ.mp3"
+    },
+    {
+      "symbol": "ଊ",
+      "words": [
+        "ନାମ: ଦୀର୍ଘ ଊ",
+        "ଊଣା"
+      ],
+      "sentences": [
+        "ତରକାରୀରେ ଲୁଣ ଊଣା ହେଲା ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଊ.mp3"
+    },
+    {
+      "symbol": "ଋ",
+      "words": [
+        "ନାମ: ହର୍ଷ ଋ",
+        "ଋଷି",
+        "ଋତୁ"
+      ],
+      "sentences": [
+        "ବନରେ ଋଷି ତପସ୍ୟା କରନ୍ତି ।",
+        " ଶୀତ ଋତୁ ରେ ଧାନ ଅମଳ ହୁଏ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଋ.mp3"
+    },
+    {
+      "symbol": "ୠ",
+      "words": [
+        "ନାମ: ଦୀର୍ଘ ୠ",
+        "ପୁରାତନ ବର୍ଣ୍ଣ"
+      ],
+      "sentences": [
+        "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+      ],
+      "audioUrl": null
+    },
+    {
+      "symbol": "ଏ",
+      "words": [
+        "ଏକ",
+        "ଏବେ"
+      ],
+      "sentences": [
+        "ରବି ଏକ ଭଲ ପିଲା ।",
+        "ମୁଁ ଏବେ ପାଠ ପଢୁଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଏ.mp3"
+    },
+    {
+      "symbol": "ଐ",
+      "words": [
+        "ଐକ୍ୟ",
+        "ଐରାବତ"
+      ],
+      "sentences": [
+        "ଜାତୀୟ ଐକ୍ୟ ବଜାୟ ରଖ ।",
+        "ଇନ୍ଦ୍ରଙ୍କ ବାହନର ନାମ ଐରାବତ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଐ.mp3"
+    },
+    {
+      "symbol": "ଓ",
+      "words": [
+        "ଓଟ",
+        "ଓଜନ"
+      ],
+      "sentences": [
+        "ଓଟ ହେଉଛି ମରୁଭୂମିର ଜାହାଜ ।",
+        "ଦୋକାନୀ ଜିନିଷ ଗୁଡିକ ଓଜନ କରେ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଓ.mp3"
+    },
+    {
+      "symbol": "ଔ",
+      "words": [
+        "ଔଷଧ"
+      ],
+      "sentences": [
+        "ଦେହ ଖରାପ ହେଲେ ଔଷଧ ଖାଅ ।",
+        "ଠିକ୍ ସମୟରେ ଔଷଧ ସେବନ କର ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଔ.mp3"
+    },
+    {
+      "symbol": "ଌ",
+      "words": [
+        "ପୁରାତନ ବର୍ଣ୍ଣ"
+      ],
+      "sentences": [
+        "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+      ],
+      "audioUrl": null
+    },
+    {
+      "symbol": "ୡ",
+      "words": [
+        "ପୁରାତନ ବର୍ଣ୍ଣ"
+      ],
+      "sentences": [
+        "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+      ],
+      "audioUrl": null
+    }
+  ]
+}

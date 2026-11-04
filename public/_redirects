@@ -1,1 +1,13 @@
+/api/v1/barnabodha /api/v1/barnabodha.json 200
+/api/v1/swarabarna /api/v1/swarabarna.json 200
+/api/v1/swara /api/v1/swarabarna.json 200
+/api/v1/byanjanabarna /api/v1/byanjanabarna.json 200
+/api/v1/byanjana /api/v1/byanjanabarna.json 200
+/api/v1/barna-parichaya /api/v1/barna-parichaya.json 200
+/api/v1/barna_parichaya /api/v1/barna-parichaya.json 200
+/api/v1/matra /api/v1/matra.json 200
+/api/v1/phala /api/v1/phala.json 200
+/api/v1/yuktakshara /api/v1/yuktakshara.json 200
+/api/v1/yukta /api/v1/yuktakshara.json 200
+/api/v1/sankhya /api/v1/sankhya.json 200
 /* /index.html 200

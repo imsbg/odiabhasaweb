@@ -1,0 +1,472 @@
+{
+  "status": "success",
+  "section": "ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ",
+  "titleOdia": "ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ",
+  "key": "byanjanabarna",
+  "symbol": "କ",
+  "total": 39,
+  "count": 39,
+  "items": [
+    {
+      "symbol": "କ",
+      "words": [
+        "କମଳା",
+        "କଦଳୀ"
+      ],
+      "sentences": [
+        "ମୋତେ କମଳା ଖାଇବାକୁ ଭଲ ଲାଗେ ।",
+        "ମୁଁ କଦଳୀ ଖାଇବାକୁ ଭଲପାଏ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/କ.mp3"
+    },
+    {
+      "symbol": "ଖ",
+      "words": [
+        "ଖବର",
+        "ଖରା"
+      ],
+      "sentences": [
+        "ଖବର କାଗଜ ପଢିବା ଭଲ ।",
+        "ଆଜି ବହୁତ ଖରା ହେଉଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଖ.mp3"
+    },
+    {
+      "symbol": "ଗ",
+      "words": [
+        "ଗାଈ",
+        "ଗଛ"
+      ],
+      "sentences": [
+        "ଗାଈ ଆମକୁ କ୍ଷୀର ଦିଏ ।",
+        "ଗଛ ଆମକୁ ଛାଇ ଦିଏ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଗ.mp3"
+    },
+    {
+      "symbol": "ଘ",
+      "words": [
+        "ଘର",
+        "ଘଣ୍ଟା"
+      ],
+      "sentences": [
+        "ଆମ ଘର ଆଗରେ ଆମ୍ବ ଗଛଟିଏ ଅଛି ।",
+        "ଆମ ବିଦ୍ୟାଳୟ ରେ ଏକ କାନ୍ଥ ଘଣ୍ଟା ଅଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଘ.mp3"
+    },
+    {
+      "symbol": "ଙ",
+      "words": [
+        "ରଙ୍ଗ"
+      ],
+      "sentences": [
+        "ଆମ ଜାତୀୟ ପତାକାରେ ତିନୋଟି ରଙ୍ଗ ଅଛି ।",
+        "ଙ ବର୍ଣ୍ଣର ସ୍ୱତନ୍ତ୍ର ବ୍ୟବହାର ନାହିଁ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଙ.mp3"
+    },
+    {
+      "symbol": "ଚ",
+      "words": [
+        "ଚକ",
+        "ଚଷମା",
+        "ଚଢ଼େଇ"
+      ],
+      "sentences": [
+        "ଗାଡିର ଚକ ଗୋଲ ଅଟେ ।",
+        "ବାପା ଚଷମା ପିନ୍ଧନ୍ତି ।",
+        "ଚଢ଼େଇ ଆକାଶରେ ଉଡ଼େ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଚ.mp3"
+    },
+    {
+      "symbol": "ଛ",
+      "words": [
+        "ଛତା",
+        "ଛବି"
+      ],
+      "sentences": [
+        "ବର୍ଷା ହେଲେ ଛତା ଦରକାର ।",
+        "ଛବିଟି ସୁନ୍ଦର ଦିଶୁଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଛ.mp3"
+    },
+    {
+      "symbol": "ଜ",
+      "words": [
+        "ଜଳ",
+        "ଜାମୁକୋଳି"
+      ],
+      "sentences": [
+        "ଜଳ ବିନା ଜୀବନ ଅସମ୍ଭବ ।",
+        " ଜାମୁକୋଳି ଖାଇବାକୁ ସ୍ୱାଦିଷ୍ଟ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଜ.mp3"
+    },
+    {
+      "symbol": "ଝ",
+      "words": [
+        "ଝରକା",
+        "ଝରଣା"
+      ],
+      "sentences": [
+        "ଝରକା ଦେଇ ପବନ ଆସେ ।",
+        "ଝରଣା ପାଣି ଥଣ୍ଡା ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଝ.mp3"
+    },
+    {
+      "symbol": "ଞ",
+      "words": [
+        "ଞ"
+      ],
+      "sentences": [
+        "ଞ ବର୍ଣ୍ଣର ସ୍ୱତନ୍ତ୍ର ବ୍ୟବହାର ନାହିଁ । ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଞ.mp3"
+    },
+    {
+      "symbol": "ଟ",
+      "words": [
+        "ଟଗର",
+        "ଟଙ୍କା"
+      ],
+      "sentences": [
+        "ଟଗର ଫୁଲର ରଙ୍ଗ ଧଳା ।",
+        "ଟଙ୍କା ସଞ୍ଚୟ କର ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଟ.mp3"
+    },
+    {
+      "symbol": "ଠ",
+      "words": [
+        "ଠକ",
+        "ଠାକୁର"
+      ],
+      "sentences": [
+        "ଠକ ଲୋକଙ୍କୁ ବିଶ୍ୱାସ କରନି ।",
+        "ଆମେ ଠାକୁରଙ୍କୁ ପୂଜା କରୁ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଠ.mp3"
+    },
+    {
+      "symbol": "ଡ",
+      "words": [
+        "ଡର",
+        "ଡାକ୍ତର"
+      ],
+      "sentences": [
+        "ମିଛ କହିବାକୁ ଡର ଲାଗେ ।",
+        "ଅସୁସ୍ଥ ହେଲେ ଡାକ୍ତରଙ୍କ ପାଖକୁ ଯାଅ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଡ.mp3"
+    },
+    {
+      "symbol": "ଢ",
+      "words": [
+        "ଢଗ",
+        "ଢାଙ୍କୁଣୀ"
+      ],
+      "sentences": [
+        "ଢଗ ଢମାଳି ମଜାଦାର ଅଟେ ।",
+        "ଖାଦ୍ୟକୁ ଢାଙ୍କୁଣୀ ଦେଇ ରଖ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଢ.mp3"
+    },
+    {
+      "symbol": "ଣ",
+      "words": [
+        "ହରିଣ",
+        "କ'ଣ"
+      ],
+      "sentences": [
+        "ହରିଣ ଜଙ୍ଗଲରେ ରହେ ।",
+        "ତୁମେ କ'ଣ କରୁଛ?"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଣ.mp3"
+    },
+    {
+      "symbol": "ତ",
+      "words": [
+        "ତରାଜୁ",
+        "ତାରା"
+      ],
+      "sentences": [
+        "ଦୋକାନୀ ତରାଜୁରେ ଓଜନ କରେ ।",
+        "ରାତି ଆକାଶରେ ତାରା ଝଲକେ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ତ.mp3"
+    },
+    {
+      "symbol": "ଥ",
+      "words": [
+        "ଥଣ୍ଡା",
+        "ଥାଳି"
+      ],
+      "sentences": [
+        "ଆଜି ବହୁତ ଥଣ୍ଡା ଲାଗୁଛି ।",
+        "ଆମେ ଥାଳିରେ ଖାଉ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଥ.mp3"
+    },
+    {
+      "symbol": "ଦ",
+      "words": [
+        "ଦହି",
+        "ଦରଜା"
+      ],
+      "sentences": [
+        "ଦହି ଖାଇବା ସ୍ୱାସ୍ଥ୍ୟ ପାଇଁ ଭଲ ।",
+        "ଘରର ଦରଜା ବନ୍ଦ କର ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଦ.mp3"
+    },
+    {
+      "symbol": "ଧ",
+      "words": [
+        "ଧାନ",
+        "ଧନ"
+      ],
+      "sentences": [
+        "ଧାନରୁ ଚାଉଳ ହୁଏ ।",
+        "ବିଦ୍ୟା ଅଟଇ ମହା ଧନ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଧ.mp3"
+    },
+    {
+      "symbol": "ନ",
+      "words": [
+        "ନଦୀ",
+        "ନଖ"
+      ],
+      "sentences": [
+        "ମହାନଦୀ ଓଡ଼ିଶାର ବଡ ନଦୀ ।",
+        "ନଖକୁ ସଫା ରଖ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ନ.mp3"
+    },
+    {
+      "symbol": "ପ",
+      "words": [
+        "ପତ୍ର",
+        "ପାଣି"
+      ],
+      "sentences": [
+        "ଗଛରେ ପତ୍ର ଥାଏ ।",
+        "ପାଣି ଆମ ଜୀବନ ଅଟେ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ପ.mp3"
+    },
+    {
+      "symbol": "ଫ",
+      "words": [
+        "ଫଳ",
+        "ଫୁଲ"
+      ],
+      "sentences": [
+        "ଫଳ ଖାଇବା ଶରୀର ପାଇଁ ଲାଭଦାୟକ ।",
+        "ବଗିଚାରେ ଫୁଲ ଫୁଟିଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଫ.mp3"
+    },
+    {
+      "symbol": "ବ",
+      "words": [
+        "ବହି",
+        "ବଗ"
+      ],
+      "sentences": [
+        "ମୁଁ ବହି ପଢୁଛି ।",
+        "ବଗ ପୋଖରୀରେ ମାଛ ଧରେ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ବ.mp3"
+    },
+    {
+      "symbol": "ଭ",
+      "words": [
+        "ଭଉଣୀ",
+        "ଭାତ"
+      ],
+      "sentences": [
+        "ମୋର ସାନ ଭଉଣୀ ଅଛି ।",
+        "ଆମେ ପ୍ରତିଦିନ ଭାତ ଖାଉ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଭ.mp3"
+    },
+    {
+      "symbol": "ମ",
+      "words": [
+        "ମନ୍ଦିର",
+        "ମା"
+      ],
+      "sentences": [
+        "ପୁରୀରେ ଶ୍ରୀ ଜଗନ୍ନାଥ ମନ୍ଦିର ଅଛି ।",
+        "ମା'ଙ୍କୁ ସମ୍ମାନ କର ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ମ.mp3"
+    },
+    {
+      "symbol": "ଯ",
+      "words": [
+        "ଯଜ୍ଞ",
+        "ଯମ"
+      ],
+      "sentences": [
+        "ଋଷିମାନେ ଯଜ୍ଞ କରନ୍ତି ।",
+        "ଯମ ଗୋଟିଏ ରାଜା ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଯ.mp3"
+    },
+    {
+      "symbol": "ର",
+      "words": [
+        "ରଥ",
+        "ରଜ"
+      ],
+      "sentences": [
+        "ରଥଯାତ୍ରା ଓଡ଼ିଶାର ଏକ ବଡ ପର୍ବ ।",
+        "ରଜରେ ମୁଁ ଦୋଳି ଖେଳିଲି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ର.mp3"
+    },
+    {
+      "symbol": "ଳ",
+      "words": [
+        "ଫଳ",
+        "ଖେଳ"
+      ],
+      "sentences": [
+        "ଗଛରେ ଫଳ ଫଳେ ।",
+        "ହକି ଆମର ଜାତୀୟ ଖେଳ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଳ.mp3"
+    },
+    {
+      "symbol": "ୱ",
+      "words": [
+        "ୱିକେଟ"
+      ],
+      "sentences": [
+        "କ୍ରିକେଟ ଖେଳରେ ୱିକେଟ୍ ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଅଂଶ ।"
+      ],
+      "audioUrl": null
+    },
+    {
+      "symbol": "ଶ",
+      "words": [
+        "ନାମ: ତାଲବ୍ୟ ଶ",
+        "ଶିକ୍ଷକ"
+      ],
+      "sentences": [
+        "ଏହା ହେଉଛି : ତାଲବ୍ୟ ଶ",
+        "ଆମ ଶିକ୍ଷକ ବହୁତ ଭଲ ପଢ଼ାନ୍ତି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଶ.mp3"
+    },
+    {
+      "symbol": "ଷ",
+      "words": [
+        "ନାମ: ମୂର୍ଦ୍ଧନ୍ୟ ଷ",
+        "ଭାଷା"
+      ],
+      "sentences": [
+        "ଏହା ହେଉଛି : ମୂର୍ଦ୍ଧନ୍ୟ ଷ",
+        "ଓଡ଼ିଆ ଆମର ମାତୃଭାଷା ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଷ.mp3"
+    },
+    {
+      "symbol": "ସ",
+      "words": [
+        "ନାମ: ଦନ୍ତ୍ୟ ସ",
+        "ସମୟ"
+      ],
+      "sentences": [
+        "ଏହା ହେଉଛି : ଦନ୍ତ୍ୟ ସ",
+        "ସମୟ କାହାରିକୁ ଅପେକ୍ଷା କରେ ନାହିଁ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ସ.mp3"
+    },
+    {
+      "symbol": "ହ",
+      "words": [
+        "ହଳ",
+        "ହାତ"
+      ],
+      "sentences": [
+        "ଚାଷୀ ବିଲରେ ହଳ କରେ ।",
+        "ଖାଇବା ପୂର୍ବରୁ ହାତ ଧୋଅ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ହ.mp3"
+    },
+    {
+      "symbol": "କ୍ଷ",
+      "words": [
+        "କ୍ଷମା",
+        "ଶିକ୍ଷକ"
+      ],
+      "sentences": [
+        "ଭୁଲ୍ ହେଲେ କ୍ଷମା ମାଗିବା ଉଚିତ୍ ।",
+        "ଶିକ୍ଷକ ଆମକୁ ଭଲ ଜ୍ଞାନ ଦିଅନ୍ତି ।"
+      ],
+      "audioUrl": null
+    },
+    {
+      "symbol": "ୟ",
+      "words": [
+        "ସମୟ",
+        "ବିଜୟ"
+      ],
+      "sentences": [
+        "ସମୟ ମୂଲ୍ୟବାନ ଅଟେ ।",
+        "ପରିଶ୍ରମ କଲେ ନିଶ୍ଚୟ ବିଜୟ ମିଳେ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ୟ.mp3"
+    },
+    {
+      "symbol": "ଲ",
+      "words": [
+        "ଲତା",
+        "ଲୁଣ"
+      ],
+      "sentences": [
+        "ଲତା ଗଛରେ ଗୁଡେଇ ହୁଏ ।",
+        "ଲୁଣ ବିନା ଖାଦ୍ୟ ଫିକା ଲାଗେ ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଲ.mp3"
+    },
+    {
+      "symbol": "ଡ଼",
+      "words": [
+        "ବଡ଼",
+        "ପାହାଡ଼"
+      ],
+      "sentences": [
+        "ହାତୀ ଏକ ବଡ଼ ଜୀବ ।",
+        "ପାହାଡ଼ ଉପରେ ମନ୍ଦିର ଅଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଡ଼.mp3"
+    },
+    {
+      "symbol": "ଢ଼",
+      "words": [
+        "ଗାଢ଼"
+      ],
+      "sentences": [
+        "ନୀଳ ରଙ୍ଗ ଗାଢ଼ ଦିଶୁଛି ।"
+      ],
+      "audioUrl": "/assets/odiabhasa/ଢ଼.mp3"
+    },
+    {
+      "symbol": "ଵ",
+      "words": [
+        "ପୁରାତନ ବର୍ଣ୍ଣ"
+      ],
+      "sentences": [
+        "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+      ],
+      "audioUrl": null
+    }
+  ]
+}

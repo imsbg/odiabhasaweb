@@ -10,6 +10,7 @@ import {
   deepLinkCategories
 } from '../data/odiaData';
 import { toOdiaNum, playOdiaAudio } from '../utils/odiaUtils';
+import { resolveOpenApiV1Request } from '../utils/openApiData';
 
 // --- REUSABLE APP-REQUIRED SCREEN / MODAL (Open App or Download App) ---
 export const AppOnlyFeatureModal: React.FC<{
@@ -1845,8 +1846,167 @@ export const MenuScreen: React.FC<{
 };
 
 export const AboutScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
+  const origin =
+    typeof window !== 'undefined' ? window.location.origin : 'https://odiabhasa.netlify.app';
+
+  const [copiedItem, setCopiedItem] = useState<string | null>(null);
+  const [selectedLang, setSelectedLang] = useState<'js' | 'curl' | 'python' | 'kotlin'>('js');
+  const [testEndpointPath, setTestEndpointPath] = useState<string>('/api/v1/number-to-word?num=125');
+  const [testNumInput, setTestNumInput] = useState<string>('125');
+
+  const copyText = (text: string, id: string) => {
+    navigator.clipboard?.writeText(text);
+    setCopiedItem(id);
+    setTimeout(() => setCopiedItem(null), 1600);
+  };
+
+  const apiEndpointsList = [
+    {
+      method: 'GET',
+      path: '/api/v1/number-to-word?num=125',
+      altPath: '/api/v1/number-to-word/125',
+      titleOdia: 'ସଂଖ୍ୟାରୁ ଶବ୍ଦ (Number to Word Converter)',
+      descOdia:
+        'ଯେକୌଣସି ଇଂରାଜୀ କିମ୍ବା ଓଡ଼ିଆ ସଂଖ୍ୟାକୁ ଓଡ଼ିଆ ଶବ୍ଦ, ଇଂରାଜୀ ଶବ୍ଦ ଓ ବ୍ୟାଙ୍କ ଚେକ୍ ଫର୍ମାଟ୍ (₹ ୧୨୫/-) ରେ ରୂପାନ୍ତର କରେ ।',
+      descEn:
+        'Converts any English or Odia number (?num=125 or /125) into Odia words, English words, Odia digits, and bank/cheque format.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/barnabodha',
+      altPath: '/api/v1/',
+      titleOdia: 'ସମସ୍ତ ବର୍ଣ୍ଣବୋଧ (Complete Home Barnabodha)',
+      descOdia:
+        'ମୂଳ ପୃଷ୍ଠାର ସମସ୍ତ ୭ଟି ବର୍ଣ୍ଣବୋଧ ବିଭାଗ (ସ୍ୱରବର୍ଣ୍ଣ, ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ, ବର୍ଣ୍ଣ ପରିଚୟ, ମାତ୍ରା, ଫଳା, ଯୁକ୍ତାକ୍ଷର, ସଂଖ୍ୟା) ଏକାଠି ପ୍ରଦାନ କରେ ।',
+      descEn:
+        'Returns the complete 7-section Home Barnabodha dataset and API index in a single JSON payload.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/swarabarna',
+      altPath: '/api/v1/swara',
+      titleOdia: 'ସ୍ୱରବର୍ଣ୍ଣ (ଅ – ଔ)',
+      descOdia: '୧୪ଟି ସ୍ୱରବର୍ଣ୍ଣ ଅକ୍ଷର, ଉଦାହରଣ ଶବ୍ଦ, ବାକ୍ୟ ଓ ଉଚ୍ଚାରଣ ଅଡିଓ (MP3) ଲିଙ୍କ୍ ।',
+      descEn: 'Returns all 14 Odia vowels (ଅ to ଔ) with example words, sentences, and MP3 audio URLs.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/byanjanabarna',
+      altPath: '/api/v1/byanjana',
+      titleOdia: 'ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ (କ – କ୍ଷ)',
+      descOdia: '୩୭ଟି ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ ଅକ୍ଷର, ଉଦାହରଣ ଶବ୍ଦ, ବାକ୍ୟ ଓ ଉଚ୍ଚାରଣ ଅଡିଓ (MP3) ଲିଙ୍କ୍ ।',
+      descEn: 'Returns all 37 Odia consonants (କ to କ୍ଷ) with example words, sentences, and MP3 audio URLs.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/barna-parichaya',
+      altPath: '/api/v1/barna_parichaya',
+      titleOdia: 'ବର୍ଣ୍ଣ ପରିଚୟ (Character Classification)',
+      descOdia: 'ଓଡ଼ିଆ ବର୍ଣ୍ଣମାଳାର ସମ୍ପୂର୍ଣ୍ଣ ବର୍ଣ୍ଣ ପରିଚୟ ଓ ଶବ୍ଦ ଉଦାହରଣ ।',
+      descEn: 'Returns Odia character classification items with words and sentences.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/matra',
+      titleOdia: 'ମାତ୍ରା (ା – ୌ)',
+      descOdia: '୧୩ଟି ଓଡ଼ିଆ ମାତ୍ରା ଚିହ୍ନ, ଶବ୍ଦ ଓ ବାକ୍ୟ ଉଦାହରଣ ।',
+      descEn: 'Returns all 13 Odia vowel diacritics (Matra) with example words and sentences.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/phala',
+      titleOdia: 'ଫଳା (୍ୟ, ୍ର, ୍ମ, ୍ବ, ୍ଲ, ୍ନ)',
+      descOdia: 'ଓଡ଼ିଆ ଫଳା ଚିହ୍ନ ଏବଂ ସେଗୁଡ଼ିକର ବ୍ୟବହାର ଉଦାହରଣ ।',
+      descEn: 'Returns Odia consonant conjunct forms (Phala) with words and usage examples.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/yuktakshara',
+      altPath: '/api/v1/yukta',
+      titleOdia: 'ଯୁକ୍ତାକ୍ଷର (ଙ୍କ – କ୍ଷ)',
+      descOdia: 'ଓଡ଼ିଆ ଯୁକ୍ତାକ୍ଷର, ଗଠନ ଓ ଉଦାହରଣ ଶବ୍ଦ ।',
+      descEn: 'Returns compound Odia characters (Yuktakshara) with words and sentences.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/sankhya',
+      titleOdia: 'ଓଡ଼ିଆ ସଂଖ୍ୟା (୦ – ୧୦୦)',
+      descOdia: 'ଓଡ଼ିଆ ସଂଖ୍ୟା ତାଲିକା, ସାଂଖ୍ୟିକ ମାନ, ଓଡ଼ିଆ ଶବ୍ଦ ଓ ଇଂରାଜୀ ଶବ୍ଦ ।',
+      descEn: 'Returns Odia numbers with numeric values, Odia word equivalents, and English words.'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/char/ଅ',
+      titleOdia: 'ଏକକ ଅକ୍ଷର ତଥ୍ୟ (Single Character Lookup)',
+      descOdia: 'ଯେକୌଣସି ଓଡ଼ିଆ ଅକ୍ଷରର ଶବ୍ଦ, ବାକ୍ୟ ଓ ଅଡିଓ ଲିଙ୍କ୍ ପ୍ରଦାନ କରେ ।',
+      descEn: 'Looks up a single Odia symbol (e.g. /api/v1/char/ଅ or /api/v1/char/କ) with words and audio.'
+    }
+  ];
+
+  const liveTestResult = useMemo(() => {
+    const qIdx = testEndpointPath.indexOf('?');
+    const p = qIdx !== -1 ? testEndpointPath.slice(0, qIdx) : testEndpointPath;
+    const s = qIdx !== -1 ? testEndpointPath.slice(qIdx) : '';
+    const resolved = resolveOpenApiV1Request(p, s, origin);
+    return JSON.stringify(resolved.data, null, 2);
+  }, [testEndpointPath, origin]);
+
+  const codeSnippets: Record<'js' | 'curl' | 'python' | 'kotlin', string> = {
+    js: `// 1. Convert Number to Odia & English Words (No API key required)
+const res = await fetch('${origin}/api/v1/number-to-word?num=125');
+const data = await res.json();
+
+console.log(data.odiaDigits);              // "୧୨୫"
+console.log(data.odiaWord);                // "ଶହେ ପଚିଶ"
+console.log(data.englishWord);             // "One Hundred Twenty Five"
+console.log(data.chequeFormat.wordsOdia);  // "ଶହେ ପଚିଶ ଟଙ୍କା ମାତ୍ର"
+
+// 2. Fetch Home Barnabodha Section (e.g. Swarabarna)
+const swaraRes = await fetch('${origin}/api/v1/swarabarna');
+const swaraData = await swaraRes.json();
+console.log(swaraData.items[0]); // { symbol: "ଅ", words: [...], audioUrl: "..." }`,
+    curl: `# 1. Number to Word API (Query param or Path param)
+curl -s "${origin}/api/v1/number-to-word?num=125"
+
+# Alternative path format:
+curl -s "${origin}/api/v1/number-to-word/125"
+
+# 2. Fetch Swarabarna (ସ୍ୱରବର୍ଣ୍ଣ) JSON
+curl -s "${origin}/api/v1/swarabarna"
+
+# 3. Fetch Complete 7-Section Home Barnabodha JSON
+curl -s "${origin}/api/v1/barnabodha"`,
+    python: `import requests
+
+# 1. Convert Number to Odia & English Words
+resp = requests.get("${origin}/api/v1/number-to-word", params={"num": 125})
+payload = resp.json()
+
+print(payload["odiaDigits"])              # ୧୨୫
+print(payload["odiaWord"])                # ଶହେ ପଚିଶ
+print(payload["chequeFormat"]["wordsOdia"]) # ଶହେ ପଚିଶ ଟଙ୍କା ମାତ୍ର
+
+# 2. Fetch Byanjanabarna (ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ)
+byanjana = requests.get("${origin}/api/v1/byanjanabarna").json()
+print("Total consonants:", byanjana["count"])`,
+    kotlin: `// Android / Kotlin Integration using HttpURLConnection or Retrofit
+val url = java.net.URL("${origin}/api/v1/number-to-word?num=125")
+val jsonText = url.readText()
+val json = org.json.JSONObject(jsonText)
+
+val odiaDigits = json.getString("odiaDigits") // "୧୨୫"
+val odiaWord = json.getString("odiaWord")     // "ଶହେ ପଚିଶ"
+
+// Deep Link into Odia Bhasa Android App from your app:
+val intent = android.content.Intent(
+    android.content.Intent.ACTION_VIEW,
+    android.net.Uri.parse("https://odiabhasa.pages.dev/open?UTILITY_NUM_TO_TEXT")
+)
+startActivity(intent)`
+  };
+
   return (
-    <div className="min-h-screen bg-[#F8F9FA] pb-20">
+    <div className="min-h-screen bg-[#F8F9FA] pb-24">
       <header className="sticky top-0 z-20 bg-[#F8F9FA] px-5 pt-4 pb-3">
         <div className="max-w-2xl mx-auto flex items-center gap-3">
           <button
@@ -1861,6 +2021,7 @@ export const AboutScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
       </header>
 
       <main className="max-w-2xl mx-auto p-5 space-y-5">
+        {/* App Overview Card */}
         <div className="bg-white rounded-3xl p-6 shadow-xs text-center space-y-4">
           <img
             src="/assets/odiabhasa/ic_launcher-playstore.png"
@@ -1895,6 +2056,7 @@ export const AboutScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
           </div>
         </div>
 
+        {/* Credits Card */}
         <div className="bg-white rounded-3xl p-5 shadow-xs space-y-3">
           <h3 className="text-lg font-black text-slate-900">ବିଶେଷ କୃତଜ୍ଞତା</h3>
           <ul className="space-y-2 text-sm font-bold text-slate-700">
@@ -1903,6 +2065,292 @@ export const AboutScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             <li>• ବିଦ୍ୟାଳୟ ଓ ଗଣଶିକ୍ଷା ବିଭାଗ, ଓଡ଼ିଶା ସରକାର — ପାଠ୍ୟପୁସ୍ତକ ଉତ୍ସ</li>
           </ul>
         </div>
+
+        {/* NEW: Developer API & Integration Informational Section */}
+        <section
+          aria-label="ଡେଭଲପର୍ API ଓ ଇଣ୍ଟିଗ୍ରେସନ୍"
+          className="bg-white rounded-3xl p-6 shadow-xs space-y-5 border border-[#6200EE]/15"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-3 border-b border-slate-100 pb-4">
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-2xl bg-[#6200EE]/10 flex items-center justify-center shrink-0">
+                <Code2 className="w-6 h-6 text-[#6200EE]" />
+              </div>
+              <div>
+                <h3 className="text-lg font-black text-slate-900">
+                  ଡେଭଲପର୍ API ଓ ଇଣ୍ଟିଗ୍ରେସନ୍ (Developer API v1)
+                </h3>
+                <p className="text-xs font-semibold text-slate-500">
+                  ଓଡ଼ିଆ ଭାଷା ଆପ୍ ସହ ଆପଣଙ୍କ ୱେବସାଇଟ୍ ବା ଆପ୍ ଯୋଡ଼ିବା ପାଇଁ ମାଗଣା REST JSON API
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-[11px] font-black border border-emerald-200">
+                GET • JSON
+              </span>
+              <span className="px-2.5 py-1 rounded-lg bg-purple-50 text-[#6200EE] text-[11px] font-black border border-purple-200">
+                No API Key
+              </span>
+              <span className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-[11px] font-bold">
+                CORS: *
+              </span>
+            </div>
+          </div>
+
+          <p className="text-xs sm:text-sm font-semibold text-slate-600 leading-relaxed">
+            ଡେଭଲପର୍‌ମାନେ ବିନା କୌଣସି API Key କିମ୍ବା Authentication ରେ ତଳେ ଦିଆଯାଇଥିବା{' '}
+            <code className="px-1.5 py-0.5 rounded bg-slate-100 text-[#6200EE] font-mono">
+              /api/v1/*
+            </code>{' '}
+            ଏଣ୍ଡପଏଣ୍ଟ ବ୍ୟବହାର କରି ଓଡ଼ିଆ ବର୍ଣ୍ଣବୋଧ, ଅକ୍ଷର ଉଚ୍ଚାରଣ ଅଡିଓ ଏବଂ ସଂଖ୍ୟାରୁ ଶବ୍ଦ (Number to Word) ତଥ୍ୟ ସିଧାସଳଖ{' '}
+            <code className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-800 font-mono">
+              application/json
+            </code>{' '}
+            ଫର୍ମାଟ୍‌ରେ ପାଇପାରିବେ ।
+          </p>
+
+          {/* 1. Explicit List of Available API Endpoints */}
+          <div className="space-y-2.5">
+            <h4 className="text-sm font-black text-slate-900 flex items-center justify-between">
+              <span>୧. ଉପଲବ୍ଧ API ଏଣ୍ଡପଏଣ୍ଟ ତାଲିକା (Available API Endpoints)</span>
+              <span className="text-[11px] font-bold text-slate-400">
+                Base URL: {origin}
+              </span>
+            </h4>
+
+            <div className="space-y-2.5">
+              {apiEndpointsList.map(ep => {
+                const fullUrl = `${origin}${ep.path}`;
+                const isSelected = testEndpointPath === ep.path;
+                return (
+                  <div
+                    key={ep.path}
+                    className={`rounded-2xl p-3.5 border transition ${
+                      isSelected
+                        ? 'bg-[#6200EE]/[0.04] border-[#6200EE]/40'
+                        : 'bg-[#F8F9FA] border-slate-200'
+                    }`}
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="px-2 py-0.5 rounded-md bg-emerald-600 text-white text-[10px] font-black tracking-wider shrink-0">
+                          {ep.method}
+                        </span>
+                        <code className="text-xs sm:text-[13px] font-mono font-bold text-[#6200EE] break-all">
+                          {ep.path}
+                        </code>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <button
+                          type="button"
+                          onClick={() => setTestEndpointPath(ep.path)}
+                          className="px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-[#6200EE] text-[11px] font-bold text-slate-700 hover:text-[#6200EE] cursor-pointer transition"
+                        >
+                          Test
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => copyText(fullUrl, ep.path)}
+                          className="p-1.5 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 cursor-pointer"
+                          title="Copy Endpoint URL"
+                          aria-label={`Copy ${ep.path}`}
+                        >
+                          {copiedItem === ep.path ? (
+                            <Check className="w-3.5 h-3.5 text-emerald-600" />
+                          ) : (
+                            <Copy className="w-3.5 h-3.5 text-slate-600" />
+                          )}
+                        </button>
+                        <a
+                          href={ep.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-2.5 py-1 rounded-lg bg-[#6200EE] hover:bg-[#5000C9] text-white text-[11px] font-bold flex items-center gap-1"
+                        >
+                          <span>JSON</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="mt-2 space-y-0.5">
+                      <div className="text-xs font-black text-slate-900">{ep.titleOdia}</div>
+                      <p className="text-xs text-slate-600 leading-relaxed">{ep.descOdia}</p>
+                      <p className="text-[11px] text-slate-500">{ep.descEn}</p>
+                      {ep.altPath && (
+                        <div className="text-[11px] text-slate-500 pt-0.5">
+                          ବିକଳ୍ପ ପଥ (Alias):{' '}
+                          <code className="font-mono text-slate-700 bg-white px-1.5 py-0.5 rounded border border-slate-200">
+                            {ep.altPath}
+                          </code>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* 2. Interactive Live API Endpoint Tester */}
+          <div className="rounded-2xl bg-slate-900 text-slate-100 p-4 space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                <h4 className="text-xs sm:text-sm font-black text-white">
+                  ୨. ଲାଇଭ୍ API ଟେଷ୍ଟର୍ (Live JSON Response Preview)
+                </h4>
+              </div>
+              <span className="text-[11px] font-mono text-emerald-400">
+                HTTP 200 • Content-Type: application/json
+              </span>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="flex-1 min-w-[200px] flex items-center bg-slate-800 rounded-xl px-3 py-2 border border-slate-700">
+                <span className="text-[11px] font-mono text-emerald-400 mr-2 font-bold">GET</span>
+                <input
+                  type="text"
+                  value={testEndpointPath}
+                  onChange={e => setTestEndpointPath(e.target.value)}
+                  aria-label="API Endpoint Path"
+                  className="w-full bg-transparent text-xs font-mono text-white focus:outline-none"
+                />
+              </div>
+
+              <div className="flex items-center gap-1.5">
+                <input
+                  type="text"
+                  value={testNumInput}
+                  onChange={e => {
+                    const val = e.target.value;
+                    setTestNumInput(val);
+                    setTestEndpointPath(`/api/v1/number-to-word?num=${encodeURIComponent(val || '0')}`);
+                  }}
+                  placeholder="ସଂଖ୍ୟା (e.g. 125)"
+                  aria-label="Test Number Input"
+                  className="w-28 bg-slate-800 border border-slate-700 rounded-xl px-2.5 py-2 text-xs font-mono text-white focus:outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={() => copyText(liveTestResult, 'live-json')}
+                  className="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-1.5 cursor-pointer"
+                >
+                  {copiedItem === 'live-json' ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5" />
+                      <span>Copy JSON</span>
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
+
+            <pre className="max-h-60 overflow-auto rounded-xl bg-black/60 p-3 text-[11px] font-mono text-emerald-300 leading-relaxed border border-slate-800">
+              {liveTestResult}
+            </pre>
+          </div>
+
+          {/* 3. Example Usage Instructions for Developers */}
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h4 className="text-sm font-black text-slate-900">
+                ୩. ବ୍ୟବହାର ନିର୍ଦ୍ଦେଶାବଳୀ ଓ କୋଡ୍ ଉଦାହରଣ (Developer Usage Examples)
+              </h4>
+
+              <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
+                {(
+                  [
+                    { id: 'js', label: 'JavaScript' },
+                    { id: 'curl', label: 'cURL' },
+                    { id: 'python', label: 'Python' },
+                    { id: 'kotlin', label: 'Android / Kotlin' }
+                  ] as const
+                ).map(tab => (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setSelectedLang(tab.id)}
+                    className={`px-2.5 py-1 rounded-lg text-[11px] font-bold cursor-pointer transition ${
+                      selectedLang === tab.id
+                        ? 'bg-[#6200EE] text-white shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative rounded-2xl bg-slate-900 text-slate-100 p-4 border border-slate-800">
+              <button
+                type="button"
+                onClick={() => copyText(codeSnippets[selectedLang], `code-${selectedLang}`)}
+                className="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-bold text-slate-200 flex items-center gap-1 cursor-pointer"
+              >
+                {copiedItem === `code-${selectedLang}` ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5" />
+                    <span>Copy Code</span>
+                  </>
+                )}
+              </button>
+              <pre className="overflow-x-auto text-xs font-mono text-slate-100 leading-relaxed pr-20">
+                {codeSnippets[selectedLang]}
+              </pre>
+            </div>
+
+            {/* Query Parameters & Deep Link Integration Guide */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div className="rounded-2xl bg-[#F8F9FA] p-3.5 border border-slate-200 space-y-1.5">
+                <div className="text-xs font-black text-slate-900">
+                  Query Parameters (`/api/v1/number-to-word`)
+                </div>
+                <ul className="text-[11px] text-slate-600 space-y-1 font-medium">
+                  <li>
+                    • <code className="font-mono text-[#6200EE]">?num=125</code> — ଇଂରାଜୀ କିମ୍ବା ଓଡ଼ିଆ ସଂଖ୍ୟା (`125` ବା `୧୨୫`)
+                  </li>
+                  <li>
+                    • <code className="font-mono text-[#6200EE]">/api/v1/number-to-word/125</code> — ସିଧାସଳଖ Path parameter
+                  </li>
+                  <li>
+                    • <code className="font-mono text-[#6200EE]">?type=swara</code> — `/api/v1/?type=swara|byanjana|matra|phala|yukta|sankhya`
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-2xl bg-[#F8F9FA] p-3.5 border border-slate-200 space-y-1.5">
+                <div className="text-xs font-black text-slate-900">
+                  App Deep Link & Odia URL Integration
+                </div>
+                <ul className="text-[11px] text-slate-600 space-y-1 font-medium">
+                  <li>
+                    • <code className="font-mono text-[#6200EE]">/ଓଡ଼ିଆ-କ୍ୟାଲେଣ୍ଡର/</code> — ସିଧାସଳଖ ଓଡ଼ିଆ ୱେବ୍ URL
+                  </li>
+                  <li>
+                    • <code className="font-mono text-[#6200EE]">?open=SWARA</code> — ଆପ୍ କିମ୍ବା ୱେବ୍ ଡିପ୍ ଲିଙ୍କ୍
+                  </li>
+                  <li>
+                    • <code className="font-mono text-[#6200EE]">?Bahi=puruna_17454</code> — ନିର୍ଦ୍ଦିଷ୍ଟ ପୁସ୍ତକ ଲିଙ୍କ୍
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );

@@ -1,0 +1,3876 @@
+{
+  "status": "success",
+  "name": "ଓଡ଼ିଆ ଭାଷା Open API v1",
+  "version": "1.0.0",
+  "authRequired": false,
+  "endpoints": {
+    "index": "/api/v1/",
+    "allBarnabodha": "/api/v1/barnabodha",
+    "swarabarna": "/api/v1/swarabarna",
+    "byanjanabarna": "/api/v1/byanjanabarna",
+    "barnaParichaya": "/api/v1/barna-parichaya",
+    "matra": "/api/v1/matra",
+    "phala": "/api/v1/phala",
+    "yuktakshara": "/api/v1/yuktakshara",
+    "sankhya": "/api/v1/sankhya",
+    "numberToWord": "/api/v1/number-to-word?num=125"
+  },
+  "sections": [
+    {
+      "id": "swarabarna",
+      "title": "ସ୍ୱରବର୍ଣ୍ଣ",
+      "symbol": "ଅ",
+      "count": 14,
+      "endpoint": "/api/v1/swarabarna"
+    },
+    {
+      "id": "byanjanabarna",
+      "title": "ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ",
+      "symbol": "କ",
+      "count": 39,
+      "endpoint": "/api/v1/byanjanabarna"
+    },
+    {
+      "id": "barna_parichaya",
+      "title": "ବର୍ଣ୍ଣ ପରିଚୟ",
+      "symbol": "ବର୍ଣ୍ଣ",
+      "count": 17,
+      "endpoint": "/api/v1/barna-parichaya"
+    },
+    {
+      "id": "matra",
+      "title": "ମାତ୍ରା",
+      "symbol": "ା",
+      "count": 17,
+      "endpoint": "/api/v1/matra"
+    },
+    {
+      "id": "phala",
+      "title": "ଫଳା",
+      "symbol": "୍ୟ",
+      "count": 7,
+      "endpoint": "/api/v1/phala"
+    },
+    {
+      "id": "yuktakshara",
+      "title": "ଯୁକ୍ତାକ୍ଷର",
+      "symbol": "ଙ୍କ",
+      "count": 100,
+      "endpoint": "/api/v1/yuktakshara"
+    },
+    {
+      "id": "sankhya",
+      "title": "ସଂଖ୍ୟା : ୦",
+      "symbol": "୦",
+      "count": 116,
+      "endpoint": "/api/v1/sankhya"
+    }
+  ],
+  "homeBarnabodhaCards": [
+    {
+      "id": "swarabarna",
+      "title": "ସ୍ୱରବର୍ଣ୍ଣ",
+      "symbol": "ଅ",
+      "count": 14,
+      "endpoint": "/api/v1/swarabarna"
+    },
+    {
+      "id": "byanjanabarna",
+      "title": "ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ",
+      "symbol": "କ",
+      "count": 39,
+      "endpoint": "/api/v1/byanjanabarna"
+    },
+    {
+      "id": "barna_parichaya",
+      "title": "ବର୍ଣ୍ଣ ପରିଚୟ",
+      "symbol": "ବର୍ଣ୍ଣ",
+      "count": 17,
+      "endpoint": "/api/v1/barna-parichaya"
+    },
+    {
+      "id": "matra",
+      "title": "ମାତ୍ରା",
+      "symbol": "ା",
+      "count": 17,
+      "endpoint": "/api/v1/matra"
+    },
+    {
+      "id": "phala",
+      "title": "ଫଳା",
+      "symbol": "୍ୟ",
+      "count": 7,
+      "endpoint": "/api/v1/phala"
+    },
+    {
+      "id": "yuktakshara",
+      "title": "ଯୁକ୍ତାକ୍ଷର",
+      "symbol": "ଙ୍କ",
+      "count": 100,
+      "endpoint": "/api/v1/yuktakshara"
+    },
+    {
+      "id": "sankhya",
+      "title": "ସଂଖ୍ୟା : ୦",
+      "symbol": "୦",
+      "count": 116,
+      "endpoint": "/api/v1/sankhya"
+    }
+  ],
+  "data": {
+    "swarabarna": {
+      "status": "success",
+      "section": "ସ୍ୱରବର୍ଣ୍ଣ",
+      "titleOdia": "ସ୍ୱରବର୍ଣ୍ଣ",
+      "key": "swarabarna",
+      "symbol": "ଅ",
+      "total": 14,
+      "count": 14,
+      "items": [
+        {
+          "symbol": "ଅ",
+          "words": [
+            "ଅରଟ",
+            "ଅଜା"
+          ],
+          "sentences": [
+            "ଅରଟ ରେ ସୂତା ବୁଣା ଯାଏ ।",
+            "ମୋ ଅଜା ମୋତେ ବହୁତ ଭଲ ପାଆନ୍ତି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଅ.mp3"
+        },
+        {
+          "symbol": "ଆ",
+          "words": [
+            "ଆକାଶ",
+            "ଆମ"
+          ],
+          "sentences": [
+            "ଆକାଶର ରଙ୍ଗ ନୀଳ ।",
+            "ଆମ ଦେଶର ନାମ ଭାରତ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଆ.mp3"
+        },
+        {
+          "symbol": "ଇ",
+          "words": [
+            "ନାମ: ହର୍ଷ ଇ",
+            "ଇଟା",
+            "ଇଛା"
+          ],
+          "sentences": [
+            "ଇଟାରେ ଘର ତିଆରି ହୁଏ ।",
+            "ମୋର ପଢିବାକୁ ଇଛା ଅଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଇ.mp3"
+        },
+        {
+          "symbol": "ଈ",
+          "words": [
+            "ନାମ: ଦୀର୍ଘ ଈ",
+            "ଈଶ୍ୱର",
+            "ଈର୍ଷା"
+          ],
+          "sentences": [
+            "ଈଶ୍ୱର ସବୁଠାରେ ଅଛନ୍ତି ।",
+            "କାହା ପ୍ରତି ଈର୍ଷା କରିବା ଉଚିତ୍ ନୁହେଁ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଈ.mp3"
+        },
+        {
+          "symbol": "ଉ",
+          "words": [
+            "ନାମ: ହର୍ଷ ଉ",
+            "ଉପର",
+            "ଉଠ"
+          ],
+          "sentences": [
+            "ଟେବୁଲ ଉପରେ ବହି ଅଛି ।",
+            "ସକାଳୁ ଜଲଦି ଉଠ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଉ.mp3"
+        },
+        {
+          "symbol": "ଊ",
+          "words": [
+            "ନାମ: ଦୀର୍ଘ ଊ",
+            "ଊଣା"
+          ],
+          "sentences": [
+            "ତରକାରୀରେ ଲୁଣ ଊଣା ହେଲା ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଊ.mp3"
+        },
+        {
+          "symbol": "ଋ",
+          "words": [
+            "ନାମ: ହର୍ଷ ଋ",
+            "ଋଷି",
+            "ଋତୁ"
+          ],
+          "sentences": [
+            "ବନରେ ଋଷି ତପସ୍ୟା କରନ୍ତି ।",
+            " ଶୀତ ଋତୁ ରେ ଧାନ ଅମଳ ହୁଏ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଋ.mp3"
+        },
+        {
+          "symbol": "ୠ",
+          "words": [
+            "ନାମ: ଦୀର୍ଘ ୠ",
+            "ପୁରାତନ ବର୍ଣ୍ଣ"
+          ],
+          "sentences": [
+            "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଏ",
+          "words": [
+            "ଏକ",
+            "ଏବେ"
+          ],
+          "sentences": [
+            "ରବି ଏକ ଭଲ ପିଲା ।",
+            "ମୁଁ ଏବେ ପାଠ ପଢୁଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଏ.mp3"
+        },
+        {
+          "symbol": "ଐ",
+          "words": [
+            "ଐକ୍ୟ",
+            "ଐରାବତ"
+          ],
+          "sentences": [
+            "ଜାତୀୟ ଐକ୍ୟ ବଜାୟ ରଖ ।",
+            "ଇନ୍ଦ୍ରଙ୍କ ବାହନର ନାମ ଐରାବତ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଐ.mp3"
+        },
+        {
+          "symbol": "ଓ",
+          "words": [
+            "ଓଟ",
+            "ଓଜନ"
+          ],
+          "sentences": [
+            "ଓଟ ହେଉଛି ମରୁଭୂମିର ଜାହାଜ ।",
+            "ଦୋକାନୀ ଜିନିଷ ଗୁଡିକ ଓଜନ କରେ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଓ.mp3"
+        },
+        {
+          "symbol": "ଔ",
+          "words": [
+            "ଔଷଧ"
+          ],
+          "sentences": [
+            "ଦେହ ଖରାପ ହେଲେ ଔଷଧ ଖାଅ ।",
+            "ଠିକ୍ ସମୟରେ ଔଷଧ ସେବନ କର ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଔ.mp3"
+        },
+        {
+          "symbol": "ଌ",
+          "words": [
+            "ପୁରାତନ ବର୍ଣ୍ଣ"
+          ],
+          "sentences": [
+            "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୡ",
+          "words": [
+            "ପୁରାତନ ବର୍ଣ୍ଣ"
+          ],
+          "sentences": [
+            "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+          ],
+          "audioUrl": null
+        }
+      ]
+    },
+    "byanjanabarna": {
+      "status": "success",
+      "section": "ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ",
+      "titleOdia": "ବ୍ୟଞ୍ଜନବର୍ଣ୍ଣ",
+      "key": "byanjanabarna",
+      "symbol": "କ",
+      "total": 39,
+      "count": 39,
+      "items": [
+        {
+          "symbol": "କ",
+          "words": [
+            "କମଳା",
+            "କଦଳୀ"
+          ],
+          "sentences": [
+            "ମୋତେ କମଳା ଖାଇବାକୁ ଭଲ ଲାଗେ ।",
+            "ମୁଁ କଦଳୀ ଖାଇବାକୁ ଭଲପାଏ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/କ.mp3"
+        },
+        {
+          "symbol": "ଖ",
+          "words": [
+            "ଖବର",
+            "ଖରା"
+          ],
+          "sentences": [
+            "ଖବର କାଗଜ ପଢିବା ଭଲ ।",
+            "ଆଜି ବହୁତ ଖରା ହେଉଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଖ.mp3"
+        },
+        {
+          "symbol": "ଗ",
+          "words": [
+            "ଗାଈ",
+            "ଗଛ"
+          ],
+          "sentences": [
+            "ଗାଈ ଆମକୁ କ୍ଷୀର ଦିଏ ।",
+            "ଗଛ ଆମକୁ ଛାଇ ଦିଏ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଗ.mp3"
+        },
+        {
+          "symbol": "ଘ",
+          "words": [
+            "ଘର",
+            "ଘଣ୍ଟା"
+          ],
+          "sentences": [
+            "ଆମ ଘର ଆଗରେ ଆମ୍ବ ଗଛଟିଏ ଅଛି ।",
+            "ଆମ ବିଦ୍ୟାଳୟ ରେ ଏକ କାନ୍ଥ ଘଣ୍ଟା ଅଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଘ.mp3"
+        },
+        {
+          "symbol": "ଙ",
+          "words": [
+            "ରଙ୍ଗ"
+          ],
+          "sentences": [
+            "ଆମ ଜାତୀୟ ପତାକାରେ ତିନୋଟି ରଙ୍ଗ ଅଛି ।",
+            "ଙ ବର୍ଣ୍ଣର ସ୍ୱତନ୍ତ୍ର ବ୍ୟବହାର ନାହିଁ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଙ.mp3"
+        },
+        {
+          "symbol": "ଚ",
+          "words": [
+            "ଚକ",
+            "ଚଷମା",
+            "ଚଢ଼େଇ"
+          ],
+          "sentences": [
+            "ଗାଡିର ଚକ ଗୋଲ ଅଟେ ।",
+            "ବାପା ଚଷମା ପିନ୍ଧନ୍ତି ।",
+            "ଚଢ଼େଇ ଆକାଶରେ ଉଡ଼େ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଚ.mp3"
+        },
+        {
+          "symbol": "ଛ",
+          "words": [
+            "ଛତା",
+            "ଛବି"
+          ],
+          "sentences": [
+            "ବର୍ଷା ହେଲେ ଛତା ଦରକାର ।",
+            "ଛବିଟି ସୁନ୍ଦର ଦିଶୁଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଛ.mp3"
+        },
+        {
+          "symbol": "ଜ",
+          "words": [
+            "ଜଳ",
+            "ଜାମୁକୋଳି"
+          ],
+          "sentences": [
+            "ଜଳ ବିନା ଜୀବନ ଅସମ୍ଭବ ।",
+            " ଜାମୁକୋଳି ଖାଇବାକୁ ସ୍ୱାଦିଷ୍ଟ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଜ.mp3"
+        },
+        {
+          "symbol": "ଝ",
+          "words": [
+            "ଝରକା",
+            "ଝରଣା"
+          ],
+          "sentences": [
+            "ଝରକା ଦେଇ ପବନ ଆସେ ।",
+            "ଝରଣା ପାଣି ଥଣ୍ଡା ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଝ.mp3"
+        },
+        {
+          "symbol": "ଞ",
+          "words": [
+            "ଞ"
+          ],
+          "sentences": [
+            "ଞ ବର୍ଣ୍ଣର ସ୍ୱତନ୍ତ୍ର ବ୍ୟବହାର ନାହିଁ । ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଞ.mp3"
+        },
+        {
+          "symbol": "ଟ",
+          "words": [
+            "ଟଗର",
+            "ଟଙ୍କା"
+          ],
+          "sentences": [
+            "ଟଗର ଫୁଲର ରଙ୍ଗ ଧଳା ।",
+            "ଟଙ୍କା ସଞ୍ଚୟ କର ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଟ.mp3"
+        },
+        {
+          "symbol": "ଠ",
+          "words": [
+            "ଠକ",
+            "ଠାକୁର"
+          ],
+          "sentences": [
+            "ଠକ ଲୋକଙ୍କୁ ବିଶ୍ୱାସ କରନି ।",
+            "ଆମେ ଠାକୁରଙ୍କୁ ପୂଜା କରୁ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଠ.mp3"
+        },
+        {
+          "symbol": "ଡ",
+          "words": [
+            "ଡର",
+            "ଡାକ୍ତର"
+          ],
+          "sentences": [
+            "ମିଛ କହିବାକୁ ଡର ଲାଗେ ।",
+            "ଅସୁସ୍ଥ ହେଲେ ଡାକ୍ତରଙ୍କ ପାଖକୁ ଯାଅ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଡ.mp3"
+        },
+        {
+          "symbol": "ଢ",
+          "words": [
+            "ଢଗ",
+            "ଢାଙ୍କୁଣୀ"
+          ],
+          "sentences": [
+            "ଢଗ ଢମାଳି ମଜାଦାର ଅଟେ ।",
+            "ଖାଦ୍ୟକୁ ଢାଙ୍କୁଣୀ ଦେଇ ରଖ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଢ.mp3"
+        },
+        {
+          "symbol": "ଣ",
+          "words": [
+            "ହରିଣ",
+            "କ'ଣ"
+          ],
+          "sentences": [
+            "ହରିଣ ଜଙ୍ଗଲରେ ରହେ ।",
+            "ତୁମେ କ'ଣ କରୁଛ?"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଣ.mp3"
+        },
+        {
+          "symbol": "ତ",
+          "words": [
+            "ତରାଜୁ",
+            "ତାରା"
+          ],
+          "sentences": [
+            "ଦୋକାନୀ ତରାଜୁରେ ଓଜନ କରେ ।",
+            "ରାତି ଆକାଶରେ ତାରା ଝଲକେ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ତ.mp3"
+        },
+        {
+          "symbol": "ଥ",
+          "words": [
+            "ଥଣ୍ଡା",
+            "ଥାଳି"
+          ],
+          "sentences": [
+            "ଆଜି ବହୁତ ଥଣ୍ଡା ଲାଗୁଛି ।",
+            "ଆମେ ଥାଳିରେ ଖାଉ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଥ.mp3"
+        },
+        {
+          "symbol": "ଦ",
+          "words": [
+            "ଦହି",
+            "ଦରଜା"
+          ],
+          "sentences": [
+            "ଦହି ଖାଇବା ସ୍ୱାସ୍ଥ୍ୟ ପାଇଁ ଭଲ ।",
+            "ଘରର ଦରଜା ବନ୍ଦ କର ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଦ.mp3"
+        },
+        {
+          "symbol": "ଧ",
+          "words": [
+            "ଧାନ",
+            "ଧନ"
+          ],
+          "sentences": [
+            "ଧାନରୁ ଚାଉଳ ହୁଏ ।",
+            "ବିଦ୍ୟା ଅଟଇ ମହା ଧନ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଧ.mp3"
+        },
+        {
+          "symbol": "ନ",
+          "words": [
+            "ନଦୀ",
+            "ନଖ"
+          ],
+          "sentences": [
+            "ମହାନଦୀ ଓଡ଼ିଶାର ବଡ ନଦୀ ।",
+            "ନଖକୁ ସଫା ରଖ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ନ.mp3"
+        },
+        {
+          "symbol": "ପ",
+          "words": [
+            "ପତ୍ର",
+            "ପାଣି"
+          ],
+          "sentences": [
+            "ଗଛରେ ପତ୍ର ଥାଏ ।",
+            "ପାଣି ଆମ ଜୀବନ ଅଟେ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ପ.mp3"
+        },
+        {
+          "symbol": "ଫ",
+          "words": [
+            "ଫଳ",
+            "ଫୁଲ"
+          ],
+          "sentences": [
+            "ଫଳ ଖାଇବା ଶରୀର ପାଇଁ ଲାଭଦାୟକ ।",
+            "ବଗିଚାରେ ଫୁଲ ଫୁଟିଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଫ.mp3"
+        },
+        {
+          "symbol": "ବ",
+          "words": [
+            "ବହି",
+            "ବଗ"
+          ],
+          "sentences": [
+            "ମୁଁ ବହି ପଢୁଛି ।",
+            "ବଗ ପୋଖରୀରେ ମାଛ ଧରେ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ବ.mp3"
+        },
+        {
+          "symbol": "ଭ",
+          "words": [
+            "ଭଉଣୀ",
+            "ଭାତ"
+          ],
+          "sentences": [
+            "ମୋର ସାନ ଭଉଣୀ ଅଛି ।",
+            "ଆମେ ପ୍ରତିଦିନ ଭାତ ଖାଉ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଭ.mp3"
+        },
+        {
+          "symbol": "ମ",
+          "words": [
+            "ମନ୍ଦିର",
+            "ମା"
+          ],
+          "sentences": [
+            "ପୁରୀରେ ଶ୍ରୀ ଜଗନ୍ନାଥ ମନ୍ଦିର ଅଛି ।",
+            "ମା'ଙ୍କୁ ସମ୍ମାନ କର ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ମ.mp3"
+        },
+        {
+          "symbol": "ଯ",
+          "words": [
+            "ଯଜ୍ଞ",
+            "ଯମ"
+          ],
+          "sentences": [
+            "ଋଷିମାନେ ଯଜ୍ଞ କରନ୍ତି ।",
+            "ଯମ ଗୋଟିଏ ରାଜା ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଯ.mp3"
+        },
+        {
+          "symbol": "ର",
+          "words": [
+            "ରଥ",
+            "ରଜ"
+          ],
+          "sentences": [
+            "ରଥଯାତ୍ରା ଓଡ଼ିଶାର ଏକ ବଡ ପର୍ବ ।",
+            "ରଜରେ ମୁଁ ଦୋଳି ଖେଳିଲି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ର.mp3"
+        },
+        {
+          "symbol": "ଳ",
+          "words": [
+            "ଫଳ",
+            "ଖେଳ"
+          ],
+          "sentences": [
+            "ଗଛରେ ଫଳ ଫଳେ ।",
+            "ହକି ଆମର ଜାତୀୟ ଖେଳ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଳ.mp3"
+        },
+        {
+          "symbol": "ୱ",
+          "words": [
+            "ୱିକେଟ"
+          ],
+          "sentences": [
+            "କ୍ରିକେଟ ଖେଳରେ ୱିକେଟ୍ ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଅଂଶ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଶ",
+          "words": [
+            "ନାମ: ତାଲବ୍ୟ ଶ",
+            "ଶିକ୍ଷକ"
+          ],
+          "sentences": [
+            "ଏହା ହେଉଛି : ତାଲବ୍ୟ ଶ",
+            "ଆମ ଶିକ୍ଷକ ବହୁତ ଭଲ ପଢ଼ାନ୍ତି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଶ.mp3"
+        },
+        {
+          "symbol": "ଷ",
+          "words": [
+            "ନାମ: ମୂର୍ଦ୍ଧନ୍ୟ ଷ",
+            "ଭାଷା"
+          ],
+          "sentences": [
+            "ଏହା ହେଉଛି : ମୂର୍ଦ୍ଧନ୍ୟ ଷ",
+            "ଓଡ଼ିଆ ଆମର ମାତୃଭାଷା ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଷ.mp3"
+        },
+        {
+          "symbol": "ସ",
+          "words": [
+            "ନାମ: ଦନ୍ତ୍ୟ ସ",
+            "ସମୟ"
+          ],
+          "sentences": [
+            "ଏହା ହେଉଛି : ଦନ୍ତ୍ୟ ସ",
+            "ସମୟ କାହାରିକୁ ଅପେକ୍ଷା କରେ ନାହିଁ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ସ.mp3"
+        },
+        {
+          "symbol": "ହ",
+          "words": [
+            "ହଳ",
+            "ହାତ"
+          ],
+          "sentences": [
+            "ଚାଷୀ ବିଲରେ ହଳ କରେ ।",
+            "ଖାଇବା ପୂର୍ବରୁ ହାତ ଧୋଅ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ହ.mp3"
+        },
+        {
+          "symbol": "କ୍ଷ",
+          "words": [
+            "କ୍ଷମା",
+            "ଶିକ୍ଷକ"
+          ],
+          "sentences": [
+            "ଭୁଲ୍ ହେଲେ କ୍ଷମା ମାଗିବା ଉଚିତ୍ ।",
+            "ଶିକ୍ଷକ ଆମକୁ ଭଲ ଜ୍ଞାନ ଦିଅନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୟ",
+          "words": [
+            "ସମୟ",
+            "ବିଜୟ"
+          ],
+          "sentences": [
+            "ସମୟ ମୂଲ୍ୟବାନ ଅଟେ ।",
+            "ପରିଶ୍ରମ କଲେ ନିଶ୍ଚୟ ବିଜୟ ମିଳେ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ୟ.mp3"
+        },
+        {
+          "symbol": "ଲ",
+          "words": [
+            "ଲତା",
+            "ଲୁଣ"
+          ],
+          "sentences": [
+            "ଲତା ଗଛରେ ଗୁଡେଇ ହୁଏ ।",
+            "ଲୁଣ ବିନା ଖାଦ୍ୟ ଫିକା ଲାଗେ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଲ.mp3"
+        },
+        {
+          "symbol": "ଡ଼",
+          "words": [
+            "ବଡ଼",
+            "ପାହାଡ଼"
+          ],
+          "sentences": [
+            "ହାତୀ ଏକ ବଡ଼ ଜୀବ ।",
+            "ପାହାଡ଼ ଉପରେ ମନ୍ଦିର ଅଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଡ଼.mp3"
+        },
+        {
+          "symbol": "ଢ଼",
+          "words": [
+            "ଗାଢ଼"
+          ],
+          "sentences": [
+            "ନୀଳ ରଙ୍ଗ ଗାଢ଼ ଦିଶୁଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଢ଼.mp3"
+        },
+        {
+          "symbol": "ଵ",
+          "words": [
+            "ପୁରାତନ ବର୍ଣ୍ଣ"
+          ],
+          "sentences": [
+            "ଏହା ଏକ ପୁରାତନ ବର୍ଣ୍ଣ ।"
+          ],
+          "audioUrl": null
+        }
+      ]
+    },
+    "barnaParichaya": {
+      "status": "success",
+      "section": "ବର୍ଣ୍ଣ ପରିଚୟ",
+      "titleOdia": "ବର୍ଣ୍ଣ ପରିଚୟ",
+      "key": "barna_parichaya",
+      "symbol": "ବର୍ଣ୍ଣ",
+      "total": 17,
+      "count": 17,
+      "items": [
+        {
+          "symbol": "ଇ",
+          "words": [
+            "ନାମ: ହର୍ଷ ଇ",
+            "ଇଟା",
+            "ଇଛା"
+          ],
+          "sentences": [
+            "ଇଟାରେ ଘର ତିଆରି ହୁଏ ।",
+            "ମୋର ପଢିବାକୁ ଇଛା ଅଛି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଇ.mp3"
+        },
+        {
+          "symbol": "ଈ",
+          "words": [
+            "ନାମ: ଦୀର୍ଘ ଈ",
+            "ଈଶ୍ୱର",
+            "ଈର୍ଷା"
+          ],
+          "sentences": [
+            "ଈଶ୍ୱର ସବୁଠାରେ ଅଛନ୍ତି ।",
+            "କାହା ପ୍ରତି ଈର୍ଷା କରିବା ଉଚିତ୍ ନୁହେଁ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଈ.mp3"
+        },
+        {
+          "symbol": "ଉ",
+          "words": [
+            "ନାମ: ହର୍ଷ ଉ",
+            "ଉପର",
+            "ଉଠ"
+          ],
+          "sentences": [
+            "ଟେବୁଲ ଉପରେ ବହି ଅଛି ।",
+            "ସକାଳୁ ଜଲଦି ଉଠ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଉ.mp3"
+        },
+        {
+          "symbol": "ଊ",
+          "words": [
+            "ନାମ: ଦୀର୍ଘ ଊ",
+            "ଊଣା"
+          ],
+          "sentences": [
+            "ତରକାରୀରେ ଲୁଣ ଊଣା ହେଲା ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଊ.mp3"
+        },
+        {
+          "symbol": "ଶ",
+          "words": [
+            "ନାମ: ତାଲବ୍ୟ ଶ",
+            "ଶିକ୍ଷକ"
+          ],
+          "sentences": [
+            "ଏହା ହେଉଛି : ତାଲବ୍ୟ ଶ",
+            "ଆମ ଶିକ୍ଷକ ବହୁତ ଭଲ ପଢ଼ାନ୍ତି ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଶ.mp3"
+        },
+        {
+          "symbol": "ଷ",
+          "words": [
+            "ନାମ: ମୂର୍ଦ୍ଧନ୍ୟ ଷ",
+            "ଭାଷା"
+          ],
+          "sentences": [
+            "ଏହା ହେଉଛି : ମୂର୍ଦ୍ଧନ୍ୟ ଷ",
+            "ଓଡ଼ିଆ ଆମର ମାତୃଭାଷା ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ଷ.mp3"
+        },
+        {
+          "symbol": "ସ",
+          "words": [
+            "ନାମ: ଦନ୍ତ୍ୟ ସ",
+            "ସମୟ"
+          ],
+          "sentences": [
+            "ଏହା ହେଉଛି : ଦନ୍ତ୍ୟ ସ",
+            "ସମୟ କାହାରିକୁ ଅପେକ୍ଷା କରେ ନାହିଁ ।"
+          ],
+          "audioUrl": "/assets/odiabhasa/ସ.mp3"
+        },
+        {
+          "symbol": "ଂ",
+          "words": [
+            "ନାମ: ଅନୁସ୍ୱାର",
+            "ସଂସାର",
+            "ସଂଖ୍ୟା"
+          ],
+          "sentences": [
+            "ବିଦ୍ୟାଳୟରେ ଛାତ୍ରଛାତ୍ରୀଙ୍କ ସଂଖ୍ୟା ବଢ଼ି ଯାଇଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଃ",
+          "words": [
+            "ନାମ: ବିସର୍ଗ",
+            "ପୁନଃ",
+            "ଦୁଃଖ"
+          ],
+          "sentences": [
+            "ଜୀବନରେ ସୁଖ ଓ ଦୁଃଖ ଲାଗି ରହିଥାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଁ",
+          "words": [
+            "ନାମ: ଚନ୍ଦ୍ରବିନ୍ଦୁ",
+            "ଯାଁଆଳ"
+          ],
+          "sentences": [
+            "ତାଙ୍କର ଦୁଇଟି ଯାଁଆଳ ପୁଅ ଅଛନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍",
+          "words": [
+            "ନାମ: ହଳନ୍ତ"
+          ],
+          "sentences": [
+            "ଦାମ୍ ଭଳି ଶବ୍ଦ, ପ+ତ୍+ର= ପତ୍ର",
+            " ଯୁକ୍ତାକ୍ଷର ପାଇଁ ମଧ୍ୟ ବ୍ୟବହାର କରାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": ",",
+          "words": [
+            "ନାମ: କମା"
+          ],
+          "sentences": [
+            "ଯେତେବେଳେ ଗୋଟିଏ ବାକ୍ୟରେ ଅନେକଗୁଡ଼ିଏ ଜିନିଷର ନାମ ଥାଏ ।",
+            "ବଜାରରୁ ଆଳୁ, ବାଇଗଣ, ପୋଟଳ ଓ କଖାରୁ ନେଇ ଆସ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "।",
+          "words": [
+            "ନାମ: ପୂର୍ଣ୍ଣଚ୍ଛେଦ",
+            "।"
+          ],
+          "sentences": [
+            "ଓଡ଼ିଆ ଲିଖନ ଶୈଳୀରେ ବାକ୍ୟ ଶେଷ ହେଲେ ପୂର୍ଣ୍ଣଚ୍ଛେଦ ବ୍ୟବହାର କରାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "?",
+          "words": [
+            "ନାମ: ପ୍ରଶ୍ନବାଚକ ଚିହ୍ନ",
+            "?"
+          ],
+          "sentences": [
+            "ତୁମର ନାମ କ’ଣ ?"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "<",
+          "words": [
+            "ନାମ: ରେଫ (ର+୍)"
+          ],
+          "sentences": [
+            "ଧର୍ମ, କର୍ମ, ସୂର୍ଯ୍ୟ",
+            "କର୍ମ ହିଁ ଭଗବାନ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଽ",
+          "words": [
+            "ନାମ: ଅବଗ୍ରହ",
+            "ସୋଽହମ୍"
+          ],
+          "sentences": [
+            "ସୋଽହମ୍ ଏକ ଭଲ ପିଲା ।",
+            "ଏହା ଅବଗ୍ରହ ଚିହ୍ନ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୰",
+          "words": [
+            "ନାମ: ସ୍ୱର୍ଗୀୟ"
+          ],
+          "sentences": [
+            "ମୃତ ବ୍ୟକ୍ତିଙ୍କ ପାଇଁ ବ୍ୟବହାର ହୁଏ ।"
+          ],
+          "audioUrl": null
+        }
+      ]
+    },
+    "matra": {
+      "status": "success",
+      "section": "ମାତ୍ରା",
+      "titleOdia": "ମାତ୍ରା",
+      "key": "matra",
+      "symbol": "ା",
+      "total": 17,
+      "count": 17,
+      "items": [
+        {
+          "symbol": "ା",
+          "words": [
+            "ବାପା",
+            "ମା",
+            "ରାଜା",
+            "ଭାଇ"
+          ],
+          "sentences": [
+            "ବାପା ମୋତେ ପାଠ ପଢ଼ାଉଛନ୍ତି ।",
+            "ମା ଘରେ ରୋଷେଇ କରୁଛନ୍ତି ।",
+            "ସେ ଜଣେ ଦୟାଳୁ ରାଜା ଥିଲେ ।",
+            "ମୋ ଭାଇ ବହୁତ ଭଲ ଖେଳେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ି",
+          "words": [
+            "ଦିନ",
+            "ଚିଲ"
+          ],
+          "sentences": [
+            "ଆଜି ଏକ ସୁନ୍ଦର ଦିନ ।",
+            "ଆକାଶରେ ଏକ ଚିଲ ଉଡୁଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୀ",
+          "words": [
+            "ନଦୀ",
+            "ଗୀତ"
+          ],
+          "sentences": [
+            "ନଦୀ କୂଳରେ ଗାଁ'ଟିଏ ଅଛି ।",
+            "ସେ ସୁନ୍ଦର ଗୀତ ଗାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୁ",
+          "words": [
+            "ଫୁଲ",
+            "ପୁଅ"
+          ],
+          "sentences": [
+            "ବଗିଚାରେ ଏକ ଗୋଲାପ ଫୁଲ ଫୁଟିଛି ।",
+            "ତାଙ୍କ ପୁଅ ଭଲ କବାଡି ଖେଳେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୂ",
+          "words": [
+            "ମୂଳ",
+            "ଦୂର"
+          ],
+          "sentences": [
+            "ଗଛ ମୂଳରେ ପ୍ରତିଦିନ ପାଣି ଦିଅ ।",
+            "ସେହି ସହରଟି ଏଠାରୁ ବହୁତ ଦୂରରେ ଅଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୃ",
+          "words": [
+            "କୃଷକ",
+            "ଗୃହ"
+          ],
+          "sentences": [
+            "କୃଷକ ବିଲରେ କାମ କରେ ।",
+            "ଆମେ ଏକ ସୁନ୍ଦର ଗୃହରେ ରହୁ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "େ",
+          "words": [
+            "ତେଲ",
+            "ଦେଶ"
+          ],
+          "sentences": [
+            "ବଜାରରେ ତେଲର ଦାମ୍ ବଢ଼ିଯାଇଛି ।",
+            "ଆମ ଦେଶର ନାମ ଭାରତ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୈ",
+          "words": [
+            "ଦୈନିକ"
+          ],
+          "sentences": [
+            "ସ୍ୱାସ୍ଥ୍ୟ ପାଇଁ ଦୈନିକ ବ୍ୟାୟାମ ଆବଶ୍ୟକ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୋ",
+          "words": [
+            "ଲୋକ",
+            "ଭୋକ"
+          ],
+          "sentences": [
+            "ବାଟରେ ବହୁତ ଲୋକ ଯାଉଛନ୍ତି ।",
+            "ମୋତେ ଭୋକ ଲାଗୁଛି କ'ଣ ଖାଇବି?"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୌ",
+          "words": [
+            "ମୌନ",
+            "ଚୌକି"
+          ],
+          "sentences": [
+            "ଶ୍ରେଣୀରେ ମୌନ ରୁହ ।",
+            "ଆମ ଘରେ ଏକ କାଠର ଚୌକି ଅଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୖ",
+          "words": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୗ",
+          "words": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍",
+          "words": [
+            "ନାମ: ହଳନ୍ତ"
+          ],
+          "sentences": [
+            "ଦାମ୍ ଭଳି ଶବ୍ଦ, ପ+ତ୍+ର= ପତ୍ର",
+            " ଯୁକ୍ତାକ୍ଷର ପାଇଁ ମଧ୍ୟ ବ୍ୟବହାର କରାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "଼",
+          "words": [
+            "ଓଡ଼ିଆ",
+            "ପଡ଼ିଲା"
+          ],
+          "sentences": [
+            "ଏହା ଡ ଓ ଢ ଧ୍ୱନି ପାଇଁ ବ୍ୟବହୃତ ହୁଏ ।",
+            "ଗଛରୁ ଫଳଟି ପଡ଼ିଲା ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୄ",
+          "words": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୢ",
+          "words": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ୣ",
+          "words": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null
+        }
+      ]
+    },
+    "phala": {
+      "status": "success",
+      "section": "ଫଳା",
+      "titleOdia": "ଫଳା",
+      "key": "phala",
+      "symbol": "୍ୟ",
+      "total": 7,
+      "count": 7,
+      "items": [
+        {
+          "symbol": "୍ୟ",
+          "words": [
+            "ସୂର୍ଯ୍ୟ",
+            "ସତ୍ୟ"
+          ],
+          "sentences": [
+            "ସୂର୍ଯ୍ୟ ପୂର୍ବ ଦିଗରେ ଉଦୟ ହୁଅନ୍ତି ।",
+            "ସଦା ସର୍ବଦା ସତ୍ୟ କୁହ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍ର",
+          "words": [
+            "ଗ୍ରାମ",
+            "ଚକ୍ର"
+          ],
+          "sentences": [
+            "ଆମ ଗ୍ରାମର ନାମ ମହୁଲି ।",
+            "ଜାତୀୟ ପତାକାରେ ଅଶୋକ ଚକ୍ର ଅଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍ୱ",
+          "words": [
+            "ଦ୍ୱାର",
+            "ସ୍ୱାଧୀନ"
+          ],
+          "sentences": [
+            "ମନ୍ଦିରର ଦ୍ୱାର ଖୋଲା ଅଛି ।",
+            "ଭାରତ ଏକ ସ୍ୱାଧୀନ ଦେଶ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍ମ",
+          "words": [
+            "ପଦ୍ମ",
+            "ଜନ୍ମ"
+          ],
+          "sentences": [
+            "ପଦ୍ମ ଆମର ଜାତୀୟ ଫୁଲ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍ନ",
+          "words": [
+            "ରତ୍ନ",
+            "ଯତ୍ନ"
+          ],
+          "sentences": [
+            "ପରିଶ୍ରମ ହିଁ ପ୍ରକୃତ ରତ୍ନ ।",
+            "ଶରୀରର ଯତ୍ନ ନେବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍ଳ",
+          "words": [
+            "ଶୁକ୍ଳ",
+            "ବିପ୍ଳବ"
+          ],
+          "sentences": [
+            "ଅମାବାସ୍ୟା ରୁ ପୂର୍ଣ୍ଣମୀ ଯାଏ ଶୁକ୍ଳପକ୍ଷ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "୍ଲ",
+          "words": [
+            "ପଲ୍ଲୀ"
+          ],
+          "sentences": [
+            "ଆମ ପଲ୍ଲୀ ବହୁତ ସୁନ୍ଦର ।"
+          ],
+          "audioUrl": null
+        }
+      ]
+    },
+    "yuktakshara": {
+      "status": "success",
+      "section": "ଯୁକ୍ତାକ୍ଷର",
+      "titleOdia": "ଯୁକ୍ତାକ୍ଷର",
+      "key": "yuktakshara",
+      "symbol": "ଙ୍କ",
+      "total": 100,
+      "count": 100,
+      "items": [
+        {
+          "symbol": "ଙ୍କ",
+          "words": [
+            "ଅଙ୍କ",
+            "ଡଙ୍କ"
+          ],
+          "sentences": [
+            "ଗଣିତରେ ଅଙ୍କ କଷାଯାଏ ।",
+            "କଖାରୁ ଡଙ୍କରେ ତରକାରୀ କରାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଙ୍ଖ",
+          "words": [
+            "ଶଙ୍ଖ"
+          ],
+          "sentences": [
+            "ମନ୍ଦିରରେ ପୂଜାରୀ ଶଙ୍ଖ ଫୁଙ୍କୁଛନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଙ୍ଗ",
+          "words": [
+            "ରଙ୍ଗ",
+            "ଜଙ୍ଗଲ"
+          ],
+          "sentences": [
+            "ହୋଲି ଏକ ରଙ୍ଗର ପର୍ବ ଅଟେ ।",
+            "ଜଙ୍ଗଲରେ ବାଘ ରହେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଙ୍ଘ",
+          "words": [
+            "ସଙ୍ଘର୍ଷ"
+          ],
+          "sentences": [
+            "ଜୀବନରେ ସଫଳତା ପାଇଁ ସଙ୍ଘର୍ଷ କରିବାକୁ ପଡେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଞ୍ଚ",
+          "words": [
+            "ପାଞ୍ଚ",
+            "ମଞ୍ଚ"
+          ],
+          "sentences": [
+            "ମୋ ପାଖରେ ପାଞ୍ଚଟି ଆମ୍ବ ଅଛି ।",
+            "କଳାକାରମାନେ ମଞ୍ଚ ଉପରେ ଅଭିନୟ କରୁଛନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଞ୍ଛ",
+          "words": [
+            "ଲାଞ୍ଛନା"
+          ],
+          "sentences": [
+            "କାହାକୁ ଲାଞ୍ଛନା ଦେବା ଏକ ଖରାପ ଅଭ୍ୟାସ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଞ୍ଜ",
+          "words": [
+            "ପଞ୍ଜୁରୀ"
+          ],
+          "sentences": [
+            "ପଞ୍ଜୁରୀ ଭିତରେ ଶୁଆଟି ରାମ-ରାମ ଡାକୁଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଞ୍ଝ",
+          "words": [
+            "ପଞ୍ଝା"
+          ],
+          "sentences": [
+            "ବାଘର ପଞ୍ଝା ବହୁତ ଶକ୍ତ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଣ୍ଟ",
+          "words": [
+            "ଘଣ୍ଟି",
+            "କଣ୍ଟା"
+          ],
+          "sentences": [
+            "ବିଦ୍ୟାଳୟରେ ଛୁଟି ଘଣ୍ଟି ବାଜିଲା ।",
+            "ମୋ ପାଦରେ କଣ୍ଟା ଟିଏ ଫୁଟି ଗଲା ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଣ୍ଠ",
+          "words": [
+            "କଣ୍ଠ",
+            "ଉତ୍କଣ୍ଠା"
+          ],
+          "sentences": [
+            "ମୋ ବନ୍ଧୁ ସୁନ୍ଦର କଣ୍ଠରେ ଗୀତ ଗାଇଲା ।",
+            "ମୁଁ ଉତ୍କଣ୍ଠାର ସହ କାର୍ଯ୍ୟ କରେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଣ୍ଡ",
+          "words": [
+            "ଦଣ୍ଡ",
+            "ଅଣ୍ଡା"
+          ],
+          "sentences": [
+            "ବିନା ହେଲମେଟରେ ଗାଡି ଚଳାଇବା ଦଣ୍ଡନୀୟ ଅପରାଧ ।",
+            "ମୋତେ ଅଣ୍ଡା ଖାଇବାକୁ ଭଲ ଲାଗେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଣ୍ଢ",
+          "words": [
+            "ଷଣ୍ଢ"
+          ],
+          "sentences": [
+            "ରାସ୍ତା ଉପରେ ଏକ ଷଣ୍ଢ ଠିଆ ହୋଇଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ତ",
+          "words": [
+            "ଅନ୍ତ",
+            "ଶାନ୍ତ"
+          ],
+          "sentences": [
+            "ସମୟର ଅନ୍ତ ନାହିଁ ।",
+            "ପିଲାଟି ବହୁତ ଶାନ୍ତ ସ୍ୱଭାବର ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ଥ",
+          "words": [
+            "ଗ୍ରନ୍ଥ",
+            "ପନ୍ଥା"
+          ],
+          "sentences": [
+            "ଭାଗବତ ଏକ ପବିତ୍ର ଗ୍ରନ୍ଥ ଅଟେ ।",
+            "ମୋ ପାଖରେ ଅନ୍ୟ କିଛି ପନ୍ଥା ନାହିଁ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ଦ",
+          "words": [
+            "ଚନ୍ଦନ",
+            "ଆନନ୍ଦ"
+          ],
+          "sentences": [
+            "ପୂଜାରେ ଚନ୍ଦନ କାଠ ବ୍ୟବହାର ହୁଏ ।",
+            "ମୋ ସାଙ୍ଗମାନଙ୍କ ସହିତ ମୁଁ ଆନନ୍ଦରେ ଖେଳେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ଧ",
+          "words": [
+            "ଅନ୍ଧ",
+            "ବନ୍ଧ"
+          ],
+          "sentences": [
+            "ସାହାଯ୍ୟ ପାଇଁ ଅନ୍ଧ ଲୋକଟି ରାସ୍ତାରେ ଠିଆ ହୋଇଥିଲା ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ମ୍ପ",
+          "words": [
+            "କମ୍ପ",
+            "ଚମ୍ପା"
+          ],
+          "sentences": [
+            "ଭୂମିକମ୍ପ ସମୟରେ ଘର କମ୍ପି ଉଠିଲା ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ମ୍ଫ",
+          "words": [
+            "ବାମ୍ଫ",
+            "ଲମ୍ଫ"
+          ],
+          "sentences": [
+            "ଗରମ ପାଣିରୁ ବାମ୍ଫ ବାହାରୁଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ମ୍ବ",
+          "words": [
+            "ଆମ୍ବ",
+            "କମ୍ବଳ"
+          ],
+          "sentences": [
+            "ଆମ୍ବ ଏକ ସୁଆଦିଆ ଫଳ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ମ୍ଭ",
+          "words": [
+            "ଆରମ୍ଭ",
+            "ସ୍ତମ୍ଭ"
+          ],
+          "sentences": [
+            "କାମ ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ ଭଗବାନଙ୍କୁ ସ୍ମରଣ କର ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "କ୍କ",
+          "words": [
+            "ଟକ୍କର"
+          ],
+          "sentences": [
+            "ଗାଡ଼ି ଦୁଇଟି ମଧ୍ୟରେ ଟକ୍କର ହେଲା ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "କ୍ତ",
+          "words": [
+            "ଭକ୍ତ",
+            "ରକ୍ତ"
+          ],
+          "sentences": [
+            "ଭକ୍ତମାନେ ମନ୍ଦିରରେ ଭଗବାନଙ୍କୁ ଦର୍ଶନ କରୁଛନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍କ",
+          "words": [
+            "ଉତ୍କଳ",
+            "ଚମତ୍କାର"
+          ],
+          "sentences": [
+            "ଉତ୍କଳ ଦିବସ ଏପ୍ରିଲ ୧ ତାରିଖ ଦିନ ପାଳନ କରାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଚ୍ଚ",
+          "words": [
+            "ଉଚ୍ଚ",
+            "ସଚ୍ଚା"
+          ],
+          "sentences": [
+            "ହିମାଳୟ ପୃଥିବୀର ସବୁଠାରୁ ଉଚ୍ଚ ପର୍ବତମାଳା ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଚ୍ଛ",
+          "words": [
+            "ସ୍ୱଚ୍ଛ",
+            "ଇଚ୍ଛା"
+          ],
+          "sentences": [
+            "ଆମେ ଆମ ପରିବେଶକୁ ସ୍ୱଚ୍ଛ ରଖିବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଜ୍ଜ",
+          "words": [
+            "ସଜ୍ଜା",
+            "ନିର୍ଲଜ୍ଜ"
+          ],
+          "sentences": [
+            "ବରଯାତ୍ରୀ ପାଇଁ ଗାଡ଼ିଟି ଫୁଲରେ ସଜ୍ଜା ହୋଇଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଜ୍ଞ",
+          "words": [
+            "ବିଜ୍ଞ",
+            "ଅଜ୍ଞ"
+          ],
+          "sentences": [
+            "ବିଜ୍ଞ ଲୋକମାନେ ସବୁବେଳେ ଜ୍ଞାନ ଅର୍ଜନ କରନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଟ୍ଟ",
+          "words": [
+            "ଭଟ୍ଟା"
+          ],
+          "sentences": [
+            "ସମୁଦ୍ରରେ ଭଟ୍ଟା ସୃଷ୍ଟି ହୁଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଡ୍ଗ",
+          "words": [
+            "ଖଡ୍ଗଧାରୀ"
+          ],
+          "sentences": [
+            "ଖଡ୍ଗଧାରୀ ଯୋଦ୍ଧା ଯୁଦ୍ଧ ପାଇଁ ପ୍ରସ୍ତୁତ ହେଲେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଡ୍ଡ",
+          "words": [
+            "ଉଡ୍ଡୟନ"
+          ],
+          "sentences": [
+            "ଗଛରୁ ପକ୍ଷୀଗୁଡିକ ଦୂରକୁ ଉଡ୍ଡୟନ କଲେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ତ",
+          "words": [
+            "ଉତ୍ତର",
+            "ଚିତ୍ତ"
+          ],
+          "sentences": [
+            "ପ୍ରଶ୍ନର ଉତ୍ତର ସଠିକ୍ ଭାବେ ଦିଅ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ଥ",
+          "words": [
+            "ଉତ୍ଥାନ"
+          ],
+          "sentences": [
+            "ସୂର୍ଯ୍ୟଙ୍କ ଉତ୍ଥାନ ସକାଳୁ ହୁଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଦ୍ୱ",
+          "words": [
+            "ଦ୍ୱାର",
+            "ଦ୍ୱନ୍ଦ"
+          ],
+          "sentences": [
+            "ମନ୍ଦିରର ଦ୍ୱାର ସବୁବେଳେ ଖୋଲା ଥାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଗ୍ଧ",
+          "words": [
+            "ଦୁଗ୍ଧ",
+            "ସ୍ନିଗ୍ଧ"
+          ],
+          "sentences": [
+            "ଗାଈ ଦୁଗ୍ଧ ଶିଶୁମାନଙ୍କ ପାଇଁ ଉପକାରୀ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଦ୍ଘ",
+          "words": [
+            "ଉଦ୍ଘାଟନ"
+          ],
+          "sentences": [
+            "ମନ୍ତ୍ରୀ ନୂଆ ପୋଲର ଉଦ୍ଘାଟନ କଲେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଦ୍ଦ",
+          "words": [
+            "ଉଦ୍ଦେଶ୍ୟ"
+          ],
+          "sentences": [
+            "ପାଠ ପଢିବାର ମୂଳ ଉଦ୍ଦେଶ୍ୟ ହେଉଛି ଜ୍ଞାନ ଆହରଣ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଦ୍ଧ",
+          "words": [
+            "ଯୁଦ୍ଧ",
+            "ବୁଦ୍ଧ"
+          ],
+          "sentences": [
+            "ଯୁଦ୍ଧ କରିବା ଦ୍ୱାରା କେବଳ କ୍ଷତି ହୁଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ବ୍ଦ",
+          "words": [
+            "ଶବ୍ଦ",
+            "ଶତାବ୍ଦୀ"
+          ],
+          "sentences": [
+            "ଜୋରରେ ଶବ୍ଦ କରିବା ଅନୁଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ବ୍ବ",
+          "words": [
+            "ମୁରବ୍ବା"
+          ],
+          "sentences": [
+            "ମୁରବ୍ବା ଖାଇବାକୁ ଭାରି ମିଠା ଲାଗେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଦ୍ଭ",
+          "words": [
+            "ଉଦ୍ଭବ",
+            "ଅଦ୍ଭୁତ"
+          ],
+          "sentences": [
+            "ଗଙ୍ଗା ନଦୀର ଉଦ୍ଭବ ହିମାଳୟରୁ ହୋଇଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ପ୍ପ",
+          "words": [
+            "ପିପ୍ପଳୀ"
+          ],
+          "sentences": [
+            "ପିପ୍ପଳୀ ଏକ ଔଷଧୀୟ ଗଛ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ପ୍ତ",
+          "words": [
+            "ସପ୍ତ",
+            "ଗୁପ୍ତ"
+          ],
+          "sentences": [
+            "ଇନ୍ଦ୍ରଧନୁରେ ସପ୍ତ ରଙ୍ଗ ଥାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ମ",
+          "words": [
+            "ଆତ୍ମନିର୍ଭର"
+          ],
+          "sentences": [
+            "ମୁଁ କାହା ଉପରେ ଆତ୍ମନିର୍ଭର କରେ ନାହିଁ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଳ୍କ",
+          "words": [
+            "ଉଲ୍କା"
+          ],
+          "sentences": [
+            "ରାତିରେ ଆକାଶରୁ ଉଲ୍କା ପିଣ୍ଡ ଖସିବାର ଦେଖାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଳ୍ପ",
+          "words": [
+            "ଗଳ୍ପ",
+            "ସ୍ୱଳ୍ପ"
+          ],
+          "sentences": [
+            "ଆଈମା ଛୋଟ ପିଲାଙ୍କୁ ଗଳ୍ପ ଶୁଣାନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଶ୍ଚ",
+          "words": [
+            "ପଶ୍ଚିମ",
+            "ନିଶ୍ଚୟ"
+          ],
+          "sentences": [
+            "ସୂର୍ଯ୍ୟ ପଶ୍ଚିମ ଦିଗରେ ଅସ୍ତ ହୁଅନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଶ୍ନ",
+          "words": [
+            "ପ୍ରଶ୍ନ"
+          ],
+          "sentences": [
+            "ଶିକ୍ଷକ ଛାତ୍ରଙ୍କୁ କଠିନ ପ୍ରଶ୍ନ ପଚାରିଲେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍କ",
+          "words": [
+            "ଶୁଷ୍କ",
+            "ପୁଷ୍କରିଣୀ"
+          ],
+          "sentences": [
+            "ଖରାଦିନେ ନଦୀ ପୋଖରୀ ଶୁଷ୍କ ହୋଇଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍ଟ",
+          "words": [
+            "କଷ୍ଟ",
+            "ନଷ୍ଟ"
+          ],
+          "sentences": [
+            "ପରିଶ୍ରମ କଲେ କଷ୍ଟର ଫଳ ମିଳେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍ଠ",
+          "words": [
+            "ଷଷ୍ଠ",
+            "ଓଷ୍ଠ"
+          ],
+          "sentences": [
+            "ସେ ଷଷ୍ଠ ଶ୍ରେଣୀରେ ପାଠ ପଢ଼େ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍ଣ",
+          "words": [
+            "କୃଷ୍ଣ",
+            "ଉଷ୍ଣ"
+          ],
+          "sentences": [
+            "ଭଗବାନ ଶ୍ରୀକୃଷ୍ଣଙ୍କୁ ସମସ୍ତେ ପୂଜା କରନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍ମ",
+          "words": [
+            "ଗ୍ରୀଷ୍ମ"
+          ],
+          "sentences": [
+            "ଗ୍ରୀଷ୍ମ ଋତୁରେ ପ୍ରବଳ ଗରମ ହୁଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍କ",
+          "words": [
+            "ପୁରସ୍କାର",
+            "ଭାସ୍କର"
+          ],
+          "sentences": [
+            "ଭଲ କାମ ପାଇଁ ତାଙ୍କୁ ପୁରସ୍କାର ମିଳିଲା ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍ତ",
+          "words": [
+            "ଅସ୍ତ",
+            "ସମସ୍ତ"
+          ],
+          "sentences": [
+            "ସୂର୍ଯ୍ୟ ସନ୍ଧ୍ୟାରେ ଅସ୍ତ ଯାଆନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍ଥ",
+          "words": [
+            "ସ୍ଥାନ",
+            "ସୁସ୍ଥ"
+          ],
+          "sentences": [
+            "ଏହି ସ୍ଥାନ ବୁଲିବା ପାଇଁ ବହୁତ ସୁନ୍ଦର ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍ନ",
+          "words": [
+            "ସ୍ନାନ",
+            "ସ୍ନେହ"
+          ],
+          "sentences": [
+            "ସକାଳୁ ଉଠି ସ୍ନାନ କରିବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍ପ",
+          "words": [
+            "ପରସ୍ପର",
+            "ସ୍ପର୍ଶ"
+          ],
+          "sentences": [
+            "ଆମେ ପରସ୍ପରକୁ ସାହାଯ୍ୟ କରିବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍ଫ",
+          "words": [
+            "ସ୍ଫଟିକ"
+          ],
+          "sentences": [
+            "ସ୍ଫଟିକ ପରି ମନକୁ ସ୍ୱଚ୍ଛ ରଖିବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍ତ୍ର",
+          "words": [
+            "ବସ୍ତ୍ର",
+            "ଅସ୍ତ୍ର"
+          ],
+          "sentences": [
+            "ଗରିବ ଲୋକଙ୍କୁ ବସ୍ତ୍ର ଦାନ କରିବା ଏକ ପୁଣ୍ୟ କାମ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ସ",
+          "words": [
+            "ଉତ୍ସବ",
+            "ବତ୍ସ"
+          ],
+          "sentences": [
+            "ଦୀପାବଳି ଏକ ଆଲୋକର ଉତ୍ସବ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "କ୍ଷ୍ଣ",
+          "words": [
+            "ତୀକ୍ଷ୍ଣ"
+          ],
+          "sentences": [
+            "ଛୁରୀଟି ବହୁତ ତୀକ୍ଷ୍ଣ ଅଟେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "କ୍ଷ୍ମ",
+          "words": [
+            "ସୂକ୍ଷ୍ମ",
+            "ଯକ୍ଷ୍ମା",
+            "ଲକ୍ଷ୍ମୀ"
+          ],
+          "sentences": [
+            "ଲକ୍ଷ୍ମୀ ପୂଜାରେ ଘରକୁ ସଜାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "କ୍ଷ୍ୟ",
+          "words": [
+            "ଲକ୍ଷ୍ୟ",
+            "ସାକ୍ଷ୍ୟ"
+          ],
+          "sentences": [
+            "ଜୀବନରେ ଏକ ବଡ ଲକ୍ଷ୍ୟ ରଖିବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଙ୍‌କ୍ତ",
+          "words": [
+            "ପଙ୍‌କ୍ତି"
+          ],
+          "sentences": [
+            ""
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଙ୍କ୍ଷ",
+          "words": [
+            "ଆକାଙ୍କ୍ଷା"
+          ],
+          "sentences": [
+            "ସମସ୍ତଙ୍କର ବଡ ହେବାର ଆକାଙ୍କ୍ଷା ଥାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଜ୍ଜ୍ଵ",
+          "words": [
+            "ଉଜ୍ଜ୍ୱଳ"
+          ],
+          "sentences": [
+            "ଚନ୍ଦ୍ର ରାତିରେ ଉଜ୍ଜ୍ୱଳ ଆଲୋକ ଦିଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ତ୍ବ",
+          "words": [
+            "ମହତ୍ତ୍ୱ"
+          ],
+          "sentences": [
+            "ସମୟର ମହତ୍ତ୍ୱ ବୁଝିବା ଦରକାର ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ତ୍ର",
+          "words": [
+            "ଛତ୍ତ୍ର"
+          ],
+          "sentences": [
+            "ବର୍ଷା ଦିନେ ଛତୁଗୁଡିକ ରାଜାଙ୍କ ଛତ୍ତ୍ର ପରି ଦେଖାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ମ୍ୟ",
+          "words": [
+            "ଦୌରାତ୍ମ୍ୟ"
+          ],
+          "sentences": [
+            "ଦୁଷ୍ଟ ଲୋକର ଦୌରାତ୍ମ୍ୟ ବଢିଗଲାଣି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଣ୍ଡ୍ର",
+          "words": [
+            "ପୁଣ୍ଡ୍ର"
+          ],
+          "sentences": [
+            "ସାଧୁମାନେ କପାଳରେ ପୁଣ୍ଡ୍ର ଧାରଣ କରନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ସ୍ନ",
+          "words": [
+            "ଜ୍ୟୋତ୍ସ୍ନା"
+          ],
+          "sentences": [
+            "ପୂର୍ଣ୍ଣମୀ ରାତିରେ ଜ୍ୟୋତ୍ସ୍ନା ପଡେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ତ୍ସ୍ୟ",
+          "words": [
+            "ମତ୍ସ୍ୟ"
+          ],
+          "sentences": [
+            "ମତ୍ସ୍ୟ ଜଳରେ ବାସ କରେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ତ୍ୟ",
+          "words": [
+            "ଅନ୍ତ୍ୟ"
+          ],
+          "sentences": [
+            "ଅନ୍ତ୍ୟ ସମୟରେ ସତ୍ୟ କୁହ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ତ୍ର",
+          "words": [
+            "ମନ୍ତ୍ର",
+            "ଯନ୍ତ୍ର"
+          ],
+          "sentences": [
+            "ପୂଜାରେ ବ୍ରାହ୍ମଣ ମନ୍ତ୍ର ପାଠ କରୁଛନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ତ୍ଵ",
+          "words": [
+            "ସାନ୍ତ୍ଵନା"
+          ],
+          "sentences": [
+            "ଦୁଃଖୀ ଲୋକକୁ ସାନ୍ତ୍ଵନା ଦିଅ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ଦ୍ର",
+          "words": [
+            "ଚନ୍ଦ୍ର",
+            "ଇନ୍ଦ୍ର"
+          ],
+          "sentences": [
+            "ରାତି ଆକାଶରେ ଚନ୍ଦ୍ର ଦେଖାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ଦ୍ବ",
+          "words": [
+            "ଦ୍ୱନ୍ଦ୍ୱ"
+          ],
+          "sentences": [
+            "ମନରୁ ସବୁ ଦ୍ୱନ୍ଦ୍ୱ ଦୂର କର ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ଧ୍ର",
+          "words": [
+            "ରନ୍ଧ୍ର"
+          ],
+          "sentences": [
+            "ଆମ ଚର୍ମରେ ଛୋଟ ଛୋଟ ଲୋମ ରନ୍ଧ୍ର ଥାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ଧ୍ୟ",
+          "words": [
+            "ସନ୍ଧ୍ୟା"
+          ],
+          "sentences": [
+            "ସନ୍ଧ୍ୟା ସମୟରେ ତୁଳସୀ ଚଉରା ମୂଳେ ଦୀପ ଜଳାଯାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ନ୍ୟ",
+          "words": [
+            "ସନ୍ନ୍ୟାସୀ"
+          ],
+          "sentences": [
+            "ସନ୍ନ୍ୟାସୀ ହିମାଳୟରେ ତପସ୍ୟା କରନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ମ୍ପ୍ର",
+          "words": [
+            "ସମ୍ପ୍ରଦାୟ"
+          ],
+          "sentences": [
+            "ସବୁ ସମ୍ପ୍ରଦାୟର ଲୋକ ମିଳିମିଶି ରହିବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ମ୍ଭ୍ର",
+          "words": [
+            "ସମ୍ଭ୍ରାନ୍ତ"
+          ],
+          "sentences": [
+            "ସେ ଏକ ସମ୍ଭ୍ରାନ୍ତ ପରିବାରର ଲୋକ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଚ୍ଚ",
+          "words": [
+            "ଚର୍ଚ୍ଚା",
+            "ଅର୍ଚ୍ଚନା"
+          ],
+          "sentences": [
+            "ଗାଁରେ ମେଳା ବିଷୟରେ ଚର୍ଚ୍ଚା ହେଉଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଚ୍ଛ",
+          "words": [
+            "ମୂର୍ଚ୍ଛା"
+          ],
+          "sentences": [
+            "ଅତ୍ୟଧିକ ଗରମ ଯୋଗୁଁ ସେ ମୂର୍ଚ୍ଛା ହୋଇଗଲେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଣ୍ଣ",
+          "words": [
+            "ବର୍ଣ୍ଣ",
+            "ପୂର୍ଣ୍ଣ"
+          ],
+          "sentences": [
+            "ଓଡ଼ିଆ ଭାଷାରେ ଅନେକ ବର୍ଣ୍ଣ ଅଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ତ୍ତ",
+          "words": [
+            "ଗର୍ତ୍ତ",
+            "ନର୍ତ୍ତକୀ"
+          ],
+          "sentences": [
+            "ସେ ଜଣେ ଭଲ ନର୍ତ୍ତକୀ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଦ୍ଧ",
+          "words": [
+            "ଅର୍ଦ୍ଧ"
+          ],
+          "sentences": [
+            "ମହାଦେବ ଅର୍ଦ୍ଧ ଚନ୍ଦ୍ରକୁ ନିଜ ଜଟାରେ ଧାରଣ କରଛନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଦ୍ଦ",
+          "words": [
+            "ମାର୍ଦ୍ଦଳ"
+          ],
+          "sentences": [
+            "ଓଡ଼ିଶୀ ନୃତ୍ୟ ପରିବେଷଣ ସମୟରେ ମାର୍ଦ୍ଦଳର ତାଳ ଏକ ସ୍ୱତନ୍ତ୍ର ମାଧୁର୍ଯ୍ୟ ସୃଷ୍ଟି କରିଥାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ତ୍ସ",
+          "words": [
+            "ଭର୍ତ୍ସନା"
+          ],
+          "sentences": [
+            "ଭୁଲ କାମ ପାଇଁ ଗୁରୁ ଭର୍ତ୍ସନା କଲେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଦ୍ର",
+          "words": [
+            "ଆର୍ଦ୍ର"
+          ],
+          "sentences": [
+            "ବର୍ଷା ଦିନେ ପାଗ ଆର୍ଦ୍ର ଥାଏ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଯ୍ୟ",
+          "words": [
+            "ସୂର୍ଯ୍ୟ",
+            "କାର୍ଯ୍ୟ"
+          ],
+          "sentences": [
+            "ସୂର୍ଯ୍ୟ ପୂର୍ବ ଦିଗରେ ଉଦୟ ହୁଅନ୍ତି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଶ୍ଵ",
+          "words": [
+            "ପାର୍ଶ୍ଵ"
+          ],
+          "sentences": [
+            "ରାସ୍ତାର ବାମ ପାର୍ଶ୍ଵରେ ଚାଲିବା ଉଚିତ୍ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍କ୍ର",
+          "words": [
+            "ନିଷ୍କ୍ରିୟ"
+          ],
+          "sentences": [
+            "ଯନ୍ତ୍ରଟି ନିଷ୍କ୍ରିୟ ହୋଇ ପଡିଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍ଟ୍ର",
+          "words": [
+            "ରାଷ୍ଟ୍ର"
+          ],
+          "sentences": [
+            "ଭାରତ ଆମର ରାଷ୍ଟ୍ର ଅଟେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ଷ୍ପ୍ର",
+          "words": [
+            "ଦୁଷ୍ପ୍ରାପ୍ୟ"
+          ],
+          "sentences": [
+            "ଏହି ଔଷଧ ବହୁତ ଦୁଷ୍ପ୍ରାପ୍ୟ ଅଟେ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ସ୍ଥ୍ୟ",
+          "words": [
+            "ସ୍ୱାସ୍ଥ୍ୟ"
+          ],
+          "sentences": [
+            "ସ୍ୱାସ୍ଥ୍ୟ ହିଁ ସମ୍ପଦ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ନ୍ତ୍ର୍ୟ",
+          "words": [
+            "ସ୍ୱାତନ୍ତ୍ର୍ୟ"
+          ],
+          "sentences": [
+            "ଓଡ଼ିଶାର କଳାର ସ୍ୱାତନ୍ତ୍ର୍ୟ ରହିଛି ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ତ୍ତ୍ୟ",
+          "words": [
+            "ମର୍ତ୍ତ୍ୟ"
+          ],
+          "sentences": [
+            "ମର୍ତ୍ତ୍ୟ ମଣ୍ଡଳେ ଦେହ ବହି, ଦେବତା ହେଲେ ମରଇ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ତ୍ତ୍ର",
+          "words": [
+            "କର୍ତ୍ତ୍ରୀ"
+          ],
+          "sentences": [
+            "ସେ ହେଉଛନ୍ତି ଘରର କର୍ତ୍ତ୍ରୀ ।"
+          ],
+          "audioUrl": null
+        },
+        {
+          "symbol": "ର୍ଦ୍ଧ୍ୱ",
+          "words": [
+            "ଊର୍ଦ୍ଧ୍ୱ"
+          ],
+          "sentences": [
+            "ପକ୍ଷୀଟି ଆକାଶର ଊର୍ଦ୍ଧ୍ୱକୁ ଉଡିଗଲା ।"
+          ],
+          "audioUrl": null
+        }
+      ]
+    },
+    "sankhya": {
+      "status": "success",
+      "section": "ସଂଖ୍ୟା",
+      "titleOdia": "ସଂଖ୍ୟା : ୦",
+      "key": "sankhya",
+      "symbol": "୦",
+      "total": 116,
+      "count": 116,
+      "items": [
+        {
+          "symbol": "୦",
+          "words": [
+            "ଶୂନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 0,
+          "odiaWord": "ଶୂନ",
+          "englishWord": "Zero"
+        },
+        {
+          "symbol": "୧",
+          "words": [
+            "ଏକ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 1,
+          "odiaWord": "ଏକ",
+          "englishWord": "One"
+        },
+        {
+          "symbol": "୨",
+          "words": [
+            "ଦୁଇ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 2,
+          "odiaWord": "ଦୁଇ",
+          "englishWord": "Two"
+        },
+        {
+          "symbol": "୩",
+          "words": [
+            "ତିନି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 3,
+          "odiaWord": "ତିନି",
+          "englishWord": "Three"
+        },
+        {
+          "symbol": "୪",
+          "words": [
+            "ଚାରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 4,
+          "odiaWord": "ଚାରି",
+          "englishWord": "Four"
+        },
+        {
+          "symbol": "୫",
+          "words": [
+            "ପାଞ୍ଚ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 5,
+          "odiaWord": "ପାଞ୍ଚ",
+          "englishWord": "Five"
+        },
+        {
+          "symbol": "୬",
+          "words": [
+            "ଛଅ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 6,
+          "odiaWord": "ଛଅ",
+          "englishWord": "Six"
+        },
+        {
+          "symbol": "୭",
+          "words": [
+            "ସାତ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 7,
+          "odiaWord": "ସାତ",
+          "englishWord": "Seven"
+        },
+        {
+          "symbol": "୮",
+          "words": [
+            "ଆଠ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 8,
+          "odiaWord": "ଆଠ",
+          "englishWord": "Eight"
+        },
+        {
+          "symbol": "୯",
+          "words": [
+            "ନଅ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 9,
+          "odiaWord": "ନଅ",
+          "englishWord": "Nine"
+        },
+        {
+          "symbol": "୧୦",
+          "words": [
+            "ଦଶ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 10,
+          "odiaWord": "ଦଶ",
+          "englishWord": "Ten"
+        },
+        {
+          "symbol": "୧୧",
+          "words": [
+            "ଏଗାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 11,
+          "odiaWord": "ଏଗାର",
+          "englishWord": "Eleven"
+        },
+        {
+          "symbol": "୧୨",
+          "words": [
+            "ବାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 12,
+          "odiaWord": "ବାର",
+          "englishWord": "Twelve"
+        },
+        {
+          "symbol": "୧୩",
+          "words": [
+            "ତେର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 13,
+          "odiaWord": "ତେର",
+          "englishWord": "Thirteen"
+        },
+        {
+          "symbol": "୧୪",
+          "words": [
+            "ଚଉଦ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 14,
+          "odiaWord": "ଚଉଦ",
+          "englishWord": "Fourteen"
+        },
+        {
+          "symbol": "୧୫",
+          "words": [
+            "ପନ୍ଦର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 15,
+          "odiaWord": "ପନ୍ଦର",
+          "englishWord": "Fifteen"
+        },
+        {
+          "symbol": "୧୬",
+          "words": [
+            "ଷୋହଳ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 16,
+          "odiaWord": "ଷୋହଳ",
+          "englishWord": "Sixteen"
+        },
+        {
+          "symbol": "୧୭",
+          "words": [
+            "ସତର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 17,
+          "odiaWord": "ସତର",
+          "englishWord": "Seventeen"
+        },
+        {
+          "symbol": "୧୮",
+          "words": [
+            "ଅଠର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 18,
+          "odiaWord": "ଅଠର",
+          "englishWord": "Eighteen"
+        },
+        {
+          "symbol": "୧୯",
+          "words": [
+            "ଉଣେଇଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 19,
+          "odiaWord": "ଊଣେଇଶ",
+          "englishWord": "Nineteen"
+        },
+        {
+          "symbol": "୨୦",
+          "words": [
+            "କୋଡ଼ିଏ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 20,
+          "odiaWord": "କୋଡ଼ିଏ",
+          "englishWord": "Twenty"
+        },
+        {
+          "symbol": "୨୧",
+          "words": [
+            "ଏକୋଇଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 21,
+          "odiaWord": "ଏକୋଇଶ",
+          "englishWord": "Twenty One"
+        },
+        {
+          "symbol": "୨୨",
+          "words": [
+            "ବାଇଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 22,
+          "odiaWord": "ବାଇଶ",
+          "englishWord": "Twenty Two"
+        },
+        {
+          "symbol": "୨୩",
+          "words": [
+            "ତେଇଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 23,
+          "odiaWord": "ତେଇଶ",
+          "englishWord": "Twenty Three"
+        },
+        {
+          "symbol": "୨୪",
+          "words": [
+            "ଚବିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 24,
+          "odiaWord": "ଚବିଶ",
+          "englishWord": "Twenty Four"
+        },
+        {
+          "symbol": "୨୫",
+          "words": [
+            "ପଚିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 25,
+          "odiaWord": "ପଚିଶ",
+          "englishWord": "Twenty Five"
+        },
+        {
+          "symbol": "୨୬",
+          "words": [
+            "ଛବିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 26,
+          "odiaWord": "ଛବିଶ",
+          "englishWord": "Twenty Six"
+        },
+        {
+          "symbol": "୨୭",
+          "words": [
+            "ସତେଇଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 27,
+          "odiaWord": "ସତେଇଶ",
+          "englishWord": "Twenty Seven"
+        },
+        {
+          "symbol": "୨୮",
+          "words": [
+            "ଅଠେଇଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 28,
+          "odiaWord": "ଅଠେଇଶ",
+          "englishWord": "Twenty Eight"
+        },
+        {
+          "symbol": "୨୯",
+          "words": [
+            "ଅଣତିରିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 29,
+          "odiaWord": "ଅଣତିରିଶ",
+          "englishWord": "Twenty Nine"
+        },
+        {
+          "symbol": "୩୦",
+          "words": [
+            "ତିରିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 30,
+          "odiaWord": "ତିରିଶ",
+          "englishWord": "Thirty"
+        },
+        {
+          "symbol": "୩୧",
+          "words": [
+            "ଏକତିରିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 31,
+          "odiaWord": "ଏକତିରିଶ",
+          "englishWord": "Thirty One"
+        },
+        {
+          "symbol": "୩୨",
+          "words": [
+            "ବତିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 32,
+          "odiaWord": "ବତିଶ",
+          "englishWord": "Thirty Two"
+        },
+        {
+          "symbol": "୩୩",
+          "words": [
+            "ତେତିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 33,
+          "odiaWord": "ତେତିଶ",
+          "englishWord": "Thirty Three"
+        },
+        {
+          "symbol": "୩୪",
+          "words": [
+            "ଚଉତିରିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 34,
+          "odiaWord": "ଚଉତିରିଶ",
+          "englishWord": "Thirty Four"
+        },
+        {
+          "symbol": "୩୫",
+          "words": [
+            "ପଞ୍ଚତିରିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 35,
+          "odiaWord": "ପଇଁତିରିଶ",
+          "englishWord": "Thirty Five"
+        },
+        {
+          "symbol": "୩୬",
+          "words": [
+            "ଛତିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 36,
+          "odiaWord": "ଛତିଶ",
+          "englishWord": "Thirty Six"
+        },
+        {
+          "symbol": "୩୭",
+          "words": [
+            "ସଇଁତିରିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 37,
+          "odiaWord": "ସଇଁତିରିଶ",
+          "englishWord": "Thirty Seven"
+        },
+        {
+          "symbol": "୩୮",
+          "words": [
+            "ଅଠତିରିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 38,
+          "odiaWord": "ଅଠତିରିଶ",
+          "englishWord": "Thirty Eight"
+        },
+        {
+          "symbol": "୩୯",
+          "words": [
+            "ଅଣଚାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 39,
+          "odiaWord": "ଅଣଚାଳିଶ",
+          "englishWord": "Thirty Nine"
+        },
+        {
+          "symbol": "୪୦",
+          "words": [
+            "ଚାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 40,
+          "odiaWord": "ଚାଳିଶ",
+          "englishWord": "Forty"
+        },
+        {
+          "symbol": "୪୧",
+          "words": [
+            "ଏକଚାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 41,
+          "odiaWord": "ଏକଚାଳିଶ",
+          "englishWord": "Forty One"
+        },
+        {
+          "symbol": "୪୨",
+          "words": [
+            "ବୟାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 42,
+          "odiaWord": "ବୟାଳିଶ",
+          "englishWord": "Forty Two"
+        },
+        {
+          "symbol": "୪୩",
+          "words": [
+            "ତେୟାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 43,
+          "odiaWord": "ତେୟାଳିଶ",
+          "englishWord": "Forty Three"
+        },
+        {
+          "symbol": "୪୪",
+          "words": [
+            "ଚଉରାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 44,
+          "odiaWord": "ଚଉରାଳିଶ",
+          "englishWord": "Forty Four"
+        },
+        {
+          "symbol": "୪୫",
+          "words": [
+            "ପଞ୍ଚଚାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 45,
+          "odiaWord": "ପଞ୍ଚାଳିଶ",
+          "englishWord": "Forty Five"
+        },
+        {
+          "symbol": "୪୬",
+          "words": [
+            "ଛୟାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 46,
+          "odiaWord": "ଛୟାଳିଶ",
+          "englishWord": "Forty Six"
+        },
+        {
+          "symbol": "୪୭",
+          "words": [
+            "ସତଚାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 47,
+          "odiaWord": "ସତଚାଳିଶ",
+          "englishWord": "Forty Seven"
+        },
+        {
+          "symbol": "୪୮",
+          "words": [
+            "ଅଠଚାଳିଶି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 48,
+          "odiaWord": "ଅଠଚାଳିଶ",
+          "englishWord": "Forty Eight"
+        },
+        {
+          "symbol": "୪୯",
+          "words": [
+            "ଅଣଚାଶ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 49,
+          "odiaWord": "ଅଣପଚାଶ",
+          "englishWord": "Forty Nine"
+        },
+        {
+          "symbol": "୫୦",
+          "words": [
+            "ପଚାଶ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 50,
+          "odiaWord": "ପଚାଶ",
+          "englishWord": "Fifty"
+        },
+        {
+          "symbol": "୫୧",
+          "words": [
+            "ଏକାବନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 51,
+          "odiaWord": "ଏକାବନ",
+          "englishWord": "Fifty One"
+        },
+        {
+          "symbol": "୫୨",
+          "words": [
+            "ବାଉନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 52,
+          "odiaWord": "ବାବନ",
+          "englishWord": "Fifty Two"
+        },
+        {
+          "symbol": "୫୩",
+          "words": [
+            "ତେପନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 53,
+          "odiaWord": "ତେପନ",
+          "englishWord": "Fifty Three"
+        },
+        {
+          "symbol": "୫୪",
+          "words": [
+            "ଚଉବନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 54,
+          "odiaWord": "ଚଉବନ",
+          "englishWord": "Fifty Four"
+        },
+        {
+          "symbol": "୫୫",
+          "words": [
+            "ପଞ୍ଚାବନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 55,
+          "odiaWord": "ପଞ୍ଚାବନ",
+          "englishWord": "Fifty Five"
+        },
+        {
+          "symbol": "୫୬",
+          "words": [
+            "ଛପନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 56,
+          "odiaWord": "ଛପନ",
+          "englishWord": "Fifty Six"
+        },
+        {
+          "symbol": "୫୭",
+          "words": [
+            "ସତାବନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 57,
+          "odiaWord": "ସତାବନ",
+          "englishWord": "Fifty Seven"
+        },
+        {
+          "symbol": "୫୮",
+          "words": [
+            "ଅଠାବନ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 58,
+          "odiaWord": "ଅଠାବନ",
+          "englishWord": "Fifty Eight"
+        },
+        {
+          "symbol": "୫୯",
+          "words": [
+            "ଅଣଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 59,
+          "odiaWord": "ଅଣଷଠି",
+          "englishWord": "Fifty Nine"
+        },
+        {
+          "symbol": "୬୦",
+          "words": [
+            "ଷାଠିଏ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 60,
+          "odiaWord": "ଷାଠିଏ",
+          "englishWord": "Sixty"
+        },
+        {
+          "symbol": "୬୧",
+          "words": [
+            "ଏକଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 61,
+          "odiaWord": "ଏକଷଠି",
+          "englishWord": "Sixty One"
+        },
+        {
+          "symbol": "୬୨",
+          "words": [
+            "ବାଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 62,
+          "odiaWord": "ବାଷଠି",
+          "englishWord": "Sixty Two"
+        },
+        {
+          "symbol": "୬୩",
+          "words": [
+            "ତେଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 63,
+          "odiaWord": "ତେଷଠି",
+          "englishWord": "Sixty Three"
+        },
+        {
+          "symbol": "୬୪",
+          "words": [
+            "ଚଉଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 64,
+          "odiaWord": "ଚଉଷଠି",
+          "englishWord": "Sixty Four"
+        },
+        {
+          "symbol": "୬୫",
+          "words": [
+            "ପଞ୍ଚଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 65,
+          "odiaWord": "ପଞ୍ଚଷଠି",
+          "englishWord": "Sixty Five"
+        },
+        {
+          "symbol": "୬୬",
+          "words": [
+            "ଛଅଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 66,
+          "odiaWord": "ଛଅଷଠି",
+          "englishWord": "Sixty Six"
+        },
+        {
+          "symbol": "୬୭",
+          "words": [
+            "ସତଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 67,
+          "odiaWord": "ସତଷଠି",
+          "englishWord": "Sixty Seven"
+        },
+        {
+          "symbol": "୬୮",
+          "words": [
+            "ଅଠଷଠି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 68,
+          "odiaWord": "ଅଠଷଠି",
+          "englishWord": "Sixty Eight"
+        },
+        {
+          "symbol": "୬୯",
+          "words": [
+            "ଅଣସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 69,
+          "odiaWord": "ଅଣସତୁରି",
+          "englishWord": "Sixty Nine"
+        },
+        {
+          "symbol": "୭୦",
+          "words": [
+            "ସତୁରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 70,
+          "odiaWord": "ସତୁରି",
+          "englishWord": "Seventy"
+        },
+        {
+          "symbol": "୭୧",
+          "words": [
+            "ଏକସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 71,
+          "odiaWord": "ଏକସ୍ତରି",
+          "englishWord": "Seventy One"
+        },
+        {
+          "symbol": "୭୨",
+          "words": [
+            "ବାସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 72,
+          "odiaWord": "ବାସ୍ତରି",
+          "englishWord": "Seventy Two"
+        },
+        {
+          "symbol": "୭୩",
+          "words": [
+            "ତେସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 73,
+          "odiaWord": "ତେସ୍ତରି",
+          "englishWord": "Seventy Three"
+        },
+        {
+          "symbol": "୭୪",
+          "words": [
+            "ଚଉସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 74,
+          "odiaWord": "ଚଉସ୍ତରି",
+          "englishWord": "Seventy Four"
+        },
+        {
+          "symbol": "୭୫",
+          "words": [
+            "ପଞ୍ଚସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 75,
+          "odiaWord": "ପଞ୍ଚସ୍ତରି",
+          "englishWord": "Seventy Five"
+        },
+        {
+          "symbol": "୭୬",
+          "words": [
+            "ଛଅସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 76,
+          "odiaWord": "ଛଅସ୍ତରି",
+          "englishWord": "Seventy Six"
+        },
+        {
+          "symbol": "୭୭",
+          "words": [
+            "ସତସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 77,
+          "odiaWord": "ସତସ୍ତରି",
+          "englishWord": "Seventy Seven"
+        },
+        {
+          "symbol": "୭୮",
+          "words": [
+            "ଅଠସ୍ତରି"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 78,
+          "odiaWord": "ଅଠସ୍ତରି",
+          "englishWord": "Seventy Eight"
+        },
+        {
+          "symbol": "୭୯",
+          "words": [
+            "ଅଣାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 79,
+          "odiaWord": "ଅଣାଅଶୀ",
+          "englishWord": "Seventy Nine"
+        },
+        {
+          "symbol": "୮୦",
+          "words": [
+            "ଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 80,
+          "odiaWord": "ଅଶୀ",
+          "englishWord": "Eighty"
+        },
+        {
+          "symbol": "୮୧",
+          "words": [
+            "ଏକାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 81,
+          "odiaWord": "ଏକାଅଶୀ",
+          "englishWord": "Eighty One"
+        },
+        {
+          "symbol": "୮୨",
+          "words": [
+            "ବୟାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 82,
+          "odiaWord": "ବୟାଅଶୀ",
+          "englishWord": "Eighty Two"
+        },
+        {
+          "symbol": "୮୩",
+          "words": [
+            "ତେୟାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 83,
+          "odiaWord": "ତେୟାଅଶୀ",
+          "englishWord": "Eighty Three"
+        },
+        {
+          "symbol": "୮୪",
+          "words": [
+            "ଚଉରାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 84,
+          "odiaWord": "ଚଉରାଅଶୀ",
+          "englishWord": "Eighty Four"
+        },
+        {
+          "symbol": "୮୫",
+          "words": [
+            "ପଞ୍ଚାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 85,
+          "odiaWord": "ପଞ୍ଚାଅଶୀ",
+          "englishWord": "Eighty Five"
+        },
+        {
+          "symbol": "୮୬",
+          "words": [
+            "ଛୟାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 86,
+          "odiaWord": "ଛୟାଅଶୀ",
+          "englishWord": "Eighty Six"
+        },
+        {
+          "symbol": "୮୭",
+          "words": [
+            "ସତାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 87,
+          "odiaWord": "ସତାଅଶୀ",
+          "englishWord": "Eighty Seven"
+        },
+        {
+          "symbol": "୮୮",
+          "words": [
+            "ଅଠାଅଶୀ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 88,
+          "odiaWord": "ଅଠାଅଶୀ",
+          "englishWord": "Eighty Eight"
+        },
+        {
+          "symbol": "୮୯",
+          "words": [
+            "ଅଣାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 89,
+          "odiaWord": "ଅଣାନବେ",
+          "englishWord": "Eighty Nine"
+        },
+        {
+          "symbol": "୯୦",
+          "words": [
+            "ନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 90,
+          "odiaWord": "ନବେ",
+          "englishWord": "Ninety"
+        },
+        {
+          "symbol": "୯୧",
+          "words": [
+            "ଏକାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 91,
+          "odiaWord": "ଏକାନବେ",
+          "englishWord": "Ninety One"
+        },
+        {
+          "symbol": "୯୨",
+          "words": [
+            "ବୟାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 92,
+          "odiaWord": "ବୟାନବେ",
+          "englishWord": "Ninety Two"
+        },
+        {
+          "symbol": "୯୩",
+          "words": [
+            "ତେୟାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 93,
+          "odiaWord": "ତେୟାନବେ",
+          "englishWord": "Ninety Three"
+        },
+        {
+          "symbol": "୯୪",
+          "words": [
+            "ଚଉରାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 94,
+          "odiaWord": "ଚଉରାନବେ",
+          "englishWord": "Ninety Four"
+        },
+        {
+          "symbol": "୯୫",
+          "words": [
+            "ପଞ୍ଚାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 95,
+          "odiaWord": "ପଞ୍ଚାନବେ",
+          "englishWord": "Ninety Five"
+        },
+        {
+          "symbol": "୯୬",
+          "words": [
+            "ଛୟାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 96,
+          "odiaWord": "ଛୟାନବେ",
+          "englishWord": "Ninety Six"
+        },
+        {
+          "symbol": "୯୭",
+          "words": [
+            "ସତାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 97,
+          "odiaWord": "ସତାନବେ",
+          "englishWord": "Ninety Seven"
+        },
+        {
+          "symbol": "୯୮",
+          "words": [
+            "ଅଠାନବେ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 98,
+          "odiaWord": "ଅଠାନବେ",
+          "englishWord": "Ninety Eight"
+        },
+        {
+          "symbol": "୯୯",
+          "words": [
+            "ଅନେଶୋତ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 99,
+          "odiaWord": "ଅଣେଶତ",
+          "englishWord": "Ninety Nine"
+        },
+        {
+          "symbol": "୧୦୦",
+          "words": [
+            "ଶହେ",
+            "ଏକ ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 100,
+          "odiaWord": "ଶହେ",
+          "englishWord": "One Hundred"
+        },
+        {
+          "symbol": "୧୫୦",
+          "words": [
+            "ଶହେ ପଚାଶ",
+            "ଦେଢ ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 150,
+          "odiaWord": "ଶହେ ପଚାଶ",
+          "englishWord": "One Hundred Fifty"
+        },
+        {
+          "symbol": "୨୦୦",
+          "words": [
+            "ଦୁଇ ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 200,
+          "odiaWord": "ଦୁଇ ଶହ",
+          "englishWord": "Two Hundred"
+        },
+        {
+          "symbol": "୨୫୦",
+          "words": [
+            "ଦୁଇ ଶହ ପଚାଶ",
+            "ଅଢେଇ ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 250,
+          "odiaWord": "ଦୁଇ ଶହ ପଚାଶ",
+          "englishWord": "Two Hundred Fifty"
+        },
+        {
+          "symbol": "୩୦୦",
+          "words": [
+            "ତିନି ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 300,
+          "odiaWord": "ତିନି ଶହ",
+          "englishWord": "Three Hundred"
+        },
+        {
+          "symbol": "୩୫୦",
+          "words": [
+            "ତିନି ଶହ ପଚାଶ",
+            "ସାଢେ ତିନି ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 350,
+          "odiaWord": "ତିନି ଶହ ପଚାଶ",
+          "englishWord": "Three Hundred Fifty"
+        },
+        {
+          "symbol": "୪୦୦",
+          "words": [
+            "ଚାରି ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 400,
+          "odiaWord": "ଚାରି ଶହ",
+          "englishWord": "Four Hundred"
+        },
+        {
+          "symbol": "୫୦୦",
+          "words": [
+            "ପାଞ୍ଚ ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 500,
+          "odiaWord": "ପାଞ୍ଚ ଶହ",
+          "englishWord": "Five Hundred"
+        },
+        {
+          "symbol": "୧୦୦୦",
+          "words": [
+            "ଏକ ହଜାର",
+            "ହଜାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 1000,
+          "odiaWord": "ଏକ ହଜାର",
+          "englishWord": "One Thousand"
+        },
+        {
+          "symbol": "୧୧୦୦",
+          "words": [
+            "ଏକ ହଜାର ଶହେ",
+            "ଏଗାର ଶହ"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 1100,
+          "odiaWord": "ଏକ ହଜାର ଶହେ",
+          "englishWord": "One Thousand One Hundred"
+        },
+        {
+          "symbol": "୧୫୦୦",
+          "words": [
+            "ଏକ ହଜାର ପାଞ୍ଚ ଶହ",
+            "ପନ୍ଦର ଶହ",
+            "ଦେଢ ହଜାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 1500,
+          "odiaWord": "ଏକ ହଜାର ପାଞ୍ଚ ଶହ",
+          "englishWord": "One Thousand Five Hundred"
+        },
+        {
+          "symbol": "୨୦୦୦",
+          "words": [
+            "ଦୁଇ ହଜାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 2000,
+          "odiaWord": "ଦୁଇ ହଜାର",
+          "englishWord": "Two Thousand"
+        },
+        {
+          "symbol": "୨୫୦୦",
+          "words": [
+            "ଦୁଇ ହଜାର ପାଞ୍ଚ ଶହ",
+            "ପଚିଶ ଶହ",
+            "ଅଢେଇ ହଜାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 2500,
+          "odiaWord": "ଦୁଇ ହଜାର ପାଞ୍ଚ ଶହ",
+          "englishWord": "Two Thousand Five Hundred"
+        },
+        {
+          "symbol": "୩୦୦୦",
+          "words": [
+            "ତିନି ହଜାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 3000,
+          "odiaWord": "ତିନି ହଜାର",
+          "englishWord": "Three Thousand"
+        },
+        {
+          "symbol": "୩୫୦୦",
+          "words": [
+            "ତିନି ହଜାର ପାଞ୍ଚ ଶହ",
+            "ପଞ୍ଚତିରିଶି ଶହ",
+            "ସାଢେ ତିନି ହଜାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 3500,
+          "odiaWord": "ତିନି ହଜାର ପାଞ୍ଚ ଶହ",
+          "englishWord": "Three Thousand Five Hundred"
+        },
+        {
+          "symbol": "୪୦୦୦",
+          "words": [
+            "ଚାରି ହଜାର"
+          ],
+          "sentences": [
+            "ଉଦାହରଣ ନାହିଁ"
+          ],
+          "audioUrl": null,
+          "numericValue": 4000,
+          "odiaWord": "ଚାରି ହଜାର",
+          "englishWord": "Four Thousand"
+        }
+      ]
+    }
+  }
+}
