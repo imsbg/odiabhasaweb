@@ -1,0 +1,6 @@
+{
+  "name": "ଓଡ଼ିଆ ଭାଷା (Odia Bhasa)",
+  "description": "ଆମ ଭାଷା, ଆମ ପରିଚୟ — ଓଡ଼ିଆ ବର୍ଣ୍ଣମାଳା, ସଂଖ୍ୟା, କୁନି ଗଣିତ, ବିଦ୍ୟାଳୟ ବହି, ଛବିଳ ମଧୁ ବର୍ଣ୍ଣବୋଧ, ଓଡ଼ିଆ କ୍ୟାଲେଣ୍ଡର ଓ ହାରମୋନିୟମ୍ ଶିକ୍ଷା ଆପ୍ ।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
