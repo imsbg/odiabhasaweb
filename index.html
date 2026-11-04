@@ -2,6 +2,71 @@
 <html lang="or">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        try {
+          var currentFetch =
+            typeof window.fetch === 'function' ? window.fetch.bind(window) : undefined;
+          var patchTarget = function (target) {
+            if (!target) return;
+            var desc = Object.getOwnPropertyDescriptor(target, 'fetch');
+            if (!desc || desc.configurable !== false) {
+              Object.defineProperty(target, 'fetch', {
+                configurable: true,
+                enumerable: true,
+                get: function () {
+                  return currentFetch;
+                },
+                set: function (fn) {
+                  if (typeof fn === 'function') {
+                    currentFetch = fn;
+                  }
+                }
+              });
+            }
+          };
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            patchTarget(Window.prototype);
+          }
+          patchTarget(window);
+        } catch (_) {}
+
+        var isExtensionFetchError = function (msg, file) {
+          return (
+            file.indexOf('chrome-extension://') === 0 ||
+            msg.indexOf('chrome-extension://') !== -1 ||
+            msg.indexOf('Cannot set property fetch') !== -1
+          );
+        };
+
+        window.addEventListener(
+          'error',
+          function (e) {
+            var msg = String((e && e.message) || '');
+            var file = String((e && e.filename) || '');
+            if (isExtensionFetchError(msg, file)) {
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              return false;
+            }
+          },
+          true
+        );
+
+        window.addEventListener(
+          'unhandledrejection',
+          function (e) {
+            var reason = String((e && e.reason && (e.reason.stack || e.reason.message || e.reason)) || '');
+            if (isExtensionFetchError(reason, '')) {
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              return false;
+            }
+          },
+          true
+        );
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ଓଡ଼ିଆ ଭାଷା (Odia Bhasa) - ଆମ ଭାଷା, ଆମ ପରିଚୟ</title>
     <meta name="description" content="ଆମ ଭାଷା, ଆମ ପରିଚୟ — ଓଡ଼ିଆ ବର୍ଣ୍ଣମାଳା, ସଂଖ୍ୟା, କୁନି ଗଣିତ, ବିଦ୍ୟାଳୟ ବହି, ଛବିଳ ମଧୁ ବର୍ଣ୍ଣବୋଧ, ଓଡ଼ିଆ କ୍ୟାଲେଣ୍ଡର ଓ ହାରମୋନିୟମ୍ ଶିକ୍ଷା ଆପ୍ ।" />

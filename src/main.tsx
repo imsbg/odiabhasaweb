@@ -3,12 +3,18 @@ import App from './App.tsx';
 import './index.css';
 
 if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(() => {
-      // Ignore Service Worker registration errors in restricted frames
-    });
-  });
+  navigator.serviceWorker
+    .getRegistrations()
+    .then((registrations) => {
+      for (const reg of registrations) {
+        if (reg.active?.scriptURL.endsWith('/sw.js') || reg.installing?.scriptURL.endsWith('/sw.js')) {
+          reg.unregister().catch(() => {});
+        }
+      }
+    })
+    .catch(() => {});
 }
 
 createRoot(document.getElementById('root')!).render(<App />);
+
 
