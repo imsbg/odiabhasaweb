@@ -1632,17 +1632,15 @@ export const MenuScreen: React.FC<{
           </a>
 
           <a
-            href="https://t.me/odiabhasa_app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:message.sbg@gmail.com"
             className="bg-white rounded-[16px] p-4 shadow-xs flex items-center gap-4 cursor-pointer bouncing-click"
           >
             <div className="w-[45px] h-[45px] rounded-[12px] bg-[#6200EE]/10 flex items-center justify-center shrink-0">
-              <Send className="w-6 h-6 text-[#6200EE]" />
+              <Mail className="w-6 h-6 text-[#6200EE]" />
             </div>
             <div className="flex-1">
-              <h3 className="text-[16px] font-bold text-slate-900">ଯୋଗାଯୋଗ / ସୂଚନା ପାଆନ୍ତୁ</h3>
-              <p className="text-[13px] text-slate-500">ଟେଲିଗ୍ରାମ୍ ଚ୍ୟାନେଲ୍‌ରେ ଯୋଡ଼ି ହୁଅନ୍ତୁ</p>
+              <h3 className="text-[16px] font-bold text-slate-900">ଯୋଗାଯୋଗ କରନ୍ତୁ</h3>
+              <p className="text-[13px] text-slate-500">message.sbg@gmail.com</p>
             </div>
             <ChevronRight className="w-4 h-4 text-slate-400" />
           </a>
