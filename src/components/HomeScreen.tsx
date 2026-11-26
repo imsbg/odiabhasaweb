@@ -9,7 +9,7 @@ import { toOdiaNum } from '../utils/odiaUtils';
 
 const BANNER_JSON_URL = "https://odiabhasa.pages.dev/banners/9.json";
 const QUIZ_JSON_URL = "https://sbgb.pages.dev/quiz/quiz.json";
-const MARQUEE_JSON_URL = "https://odiabhasa.pages.dev/marquee/2.json";
+const MARQUEE_JSON_URL = "https://odiabhasa.pages.dev/marquee/3.json";
 const ALLOWED_HOSTS = ["imsbg.github.io", "play.google.com"];
 
 interface BannerData {
